@@ -4,7 +4,8 @@ set number
 set noswapfile
 " インデントをスペース4つに設定
 set tabstop=4
- 
+set shiftwidth=4
+
 let $CACHE = empty($XDG_CACHE_HOME) ? expand('$HOME/.cache') : $XGD_CACHE_HOME
 let $CONFIG = empty($XDG_CACHE_HOME) ? expand('$HOME/.config') : $XGD_CACHE_HOME
 let $DATA = empty($XDG_CACHE_HOME) ? expand('$HOME/.local/share') : $XGD_CACHE_HOME
