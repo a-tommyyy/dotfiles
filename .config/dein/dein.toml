@@ -9,12 +9,20 @@ repo = 'Shougo/neosnippet-snippets'
 
 [[plugins]]
 repo = 'scrooloose/nerdtree'
+hook_add = '''
+	nnoremap <silent><C-e> :NERDTreeToggle<CR>
+	autocmd vimenter * if !argc() | NERDTree | endif
+	nmap <Leader><Tab> <C-w>w
+	autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+'''
 
 [[plugins]]
 repo = 'Shougo/denite.nvim'
+hook_add = '''
+	nmap [denite] <Nop>
+	map <C-j> [denite]
+'''
 
 [[plugins]]
 repo = 'vim-airline/vim-airline'
 
-[[plugins]]
-repo = 'tpope/vim-fugitive'
