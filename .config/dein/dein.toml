@@ -2,7 +2,8 @@
 repo = 'Shougo/dein.vim'
 
 [[plugins]]
-repo = 'Shougo/neosnippet-snippets'
+repo = 'Shougo/vimproc.vim'
+build = 'make'
 
 [[plugins]]
 repo = 'Shougo/deoplete.nvim'
@@ -49,4 +50,3 @@ hook_add = '''
     let g:indent_guides_guide_size = 1
     let g:indent_guides_exclude_filetypes = ['help', 'nerdtree', 'tagbar', 'unite']
 '''
-
