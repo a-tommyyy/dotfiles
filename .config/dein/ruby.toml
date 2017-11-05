@@ -6,5 +6,3 @@ on_ft = 'ruby'
 repo = 'bbatsov/rubocop'
 of_ft = 'ruby'
 
-[[plugins]]
-

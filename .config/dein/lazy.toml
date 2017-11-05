@@ -1,0 +1,6 @@
+[[plugins]]
+repo = 'Shougo/neosnippet.vim'
+
+[[plugins]]
+repo = 'tpope/vim-git'
+
