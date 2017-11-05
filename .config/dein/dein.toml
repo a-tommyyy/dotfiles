@@ -73,3 +73,6 @@ hook_add = '''
     nmap <Leader>r :cclose<CR>:write<CR>:QuickRun -mode n<CR>
 '''
 
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+
