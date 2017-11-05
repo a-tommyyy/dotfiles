@@ -15,6 +15,16 @@ set softtabstop=4
 set autoindent
 set smarttab
 
+" Delete Highlight by Esc twice
+nmap <ESC><ESC> ;nohlsearch<CR><ESC>
+
+" Visualize Tab, Space, Emptyline
+set list
+set listchars=tab:>.,trail:･,extends:>,precedes:<,nbsp:%
+function! ZenkakuSpace()
+    highlight ZenkakuSpace cterm=reverse ctermfg=DarkMagenta gui=reverse guifg=DarkMagenta
+endfunction
+
 " edit
 set smartindent
 set showmatch                                   "閉じカッコが入力時対応するカッコを強調
@@ -55,7 +65,8 @@ let g:indent_guides_enable_on_vim_startup = 1   " Vim を立ち上げたと時�
 " #####################################
 " ### Python provider
 " #####################################
-let g:python_host_prog=$PYENV_ROOT.'/versions/2.7.14/bin/python'
+let g:python_host_prog = $PYENV_ROOT.'/versions/2.7.14/bin/python'
+let g:python3_host_prog = $PYENV_ROOT.'/versions/3.6.3/bin/python'
 
 " #####################################
 " ### SETUP dein.vim
@@ -92,6 +103,9 @@ if dein#load_state(s:dein_dir)
 
     call dein#load_toml(s:toml_dir . '/dein.toml', {'lazy': 0})
     call dein#load_toml(s:toml_dir . '/lazy.toml', {'lazy': 1})
+    call dein#load_toml(s:toml_dir . '/ruby.toml', {'lazy': 1})
+    call dein#load_toml(s:toml_dir . '/other.toml', {'lazy': 1})
+    call dein#load_toml(s:toml_dir . '/python.toml', {'lazy': 0})
 
     call dein#end()
     call dein#save_state()
