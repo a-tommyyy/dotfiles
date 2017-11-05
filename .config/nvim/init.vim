@@ -15,6 +15,16 @@ set softtabstop=4
 set autoindent
 set smarttab
 
+" Delete Highlight by Esc twice
+nmap <ESC><ESC> ;nohlsearch<CR><ESC>
+
+" Visualize Tab, Space, Emptyline
+set list
+set listchars=tab:>.,trail:･,extends:>,precedes:<,nbsp:%
+function! ZenkakuSpace()
+    highlight ZenkakuSpace cterm=reverse ctermfg=DarkMagenta gui=reverse guifg=DarkMagenta
+endfunction
+
 " edit
 set smartindent
 set showmatch                                   "閉じカッコが入力時対応するカッコを強調
