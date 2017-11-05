@@ -13,11 +13,14 @@ repo = 'nathanaelkane/vim-indent-guides'
 
 [[plugins]] # powerline
 repo  =  'alpaca-tc/alpaca_powertabline'
+
 [[plugins]] # powerline
 repo  =  'Lokaltog/powerline'
 rtp   =  'powerline/bindings/vim'
+
 [[plugins]] # powerline
 repo  =  'Lokaltog/powerline-fontpatcher'
+
 [[plugins]] # powerline
 repo  =  'itchyny/lightline.vim'
 
