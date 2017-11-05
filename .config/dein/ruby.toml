@@ -1,8 +1,0 @@
-[[plugins]]
-repo = 'tpope/vim-endwise'
-on_ft = 'ruby'
-
-[[plugins]]
-repo = 'bbatsov/rubocop'
-of_ft = 'ruby'
-
