@@ -1,5 +1,10 @@
 [[plugins]]
 repo = 'tomasr/molokai'
+hook_add = '''
+    let g:molokai_original = 1
+    let g:rehash256 = 1
+    set background=dark
+'''
 
 [[plugins]]
 repo = 'Shougo/dein.vim'
@@ -22,8 +27,8 @@ hook_source = '''
   let g:deoplete#file#enable_buffer_path = 1
   let g:deoplete#max_list = 10000
   inoremap <expr><tab> pumvisible() ? "\<C-n>" :
-        \ neosnippet#expandable_or_jumpable() ?
-        \    "\<Plug>(neosnippet_expand_or_jump)" : "\<tab>"
+    \ neosnippet#expandable_or_jumpable() ?
+    \    "\<Plug>(neosnippet_expand_or_jump)" : "\<tab>"
 '''
 
 [[plugins]]

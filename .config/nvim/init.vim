@@ -63,13 +63,6 @@ inoremap jj <ESC>                               "入力モード中に素早くj
 let g:indent_guides_enable_on_vim_startup = 1   " Vim を立ち上げたと時に、自動的にvim-indent-guidesをオンにする
 
 " #####################################
-" # Color schema
-" #####################################
-set t_Co=256
-set termguicolors
-set background=dark
-
-" #####################################
 " ### Python provider
 " #####################################
 let g:python_host_prog = $PYENV_ROOT.'/versions/2.7.14/bin/python'
