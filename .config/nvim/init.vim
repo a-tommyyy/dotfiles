@@ -7,13 +7,15 @@ set number
 " disable swapfile
 set noswapfile
 
-" tab
+" tab default
 set tabstop=4
 set shiftwidth=4
 set expandtab
 set softtabstop=4
 set autoindent
 set smarttab
+" change tab setting in case by filetypes
+filetype plugin indent on
 
 " Delete Highlight by Esc twice
 nmap <ESC><ESC> ;nohlsearch<CR><ESC>
