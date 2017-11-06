@@ -66,7 +66,7 @@ let g:indent_guides_enable_on_vim_startup = 1   " Vim を立ち上げたと時�
 " ### Python provider
 " #####################################
 let g:python_host_prog = $PYENV_ROOT.'/versions/2.7.14/bin/python'
-let g:python3_host_prog = $PYENV_ROOT.'/versions/3.6.3/bin/python'
+let g:python3_host_prog = $PYENV_ROOT.'/versions/3.6.0/bin/python'
 
 " #####################################
 " ### SETUP dein.vim
