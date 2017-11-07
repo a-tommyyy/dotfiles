@@ -42,7 +42,7 @@ hook_add = '''
 
 [[plugins]]
 repo = 'Shougo/denite.nvim'
-hook_add = '''
+jhook_add = '''
     nmap [denite] <Nop>
     map <C-j> [denite]
 '''
@@ -83,6 +83,9 @@ hook_add = '''
 
 [[plugins]]
 repo = 'tpope/vim-fugitive'
+
+[[plugins]]
+repo = 'Shougo/neosnippet-snippets'
 
 [[plugins]]
 repo = 'Shougo/neosnippet.vim'
