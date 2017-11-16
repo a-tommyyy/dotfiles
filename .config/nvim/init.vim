@@ -20,6 +20,18 @@ filetype plugin indent on
 " Delete Highlight by Esc twice
 nmap <ESC><ESC> ;nohlsearch<CR><ESC>
 
+" Complete brackets
+inoremap { {}<Left>
+inoremap {<Enter> {}<Left><CR><ESC><S-o>
+inoremap ( ()<ESC>i
+inoremap (<Enter> ()<Left><CR><ESC><S-o>
+inoremap " ""<Left>
+inoremap ' ''<Left>
+inoremap [ []<Left>
+inoremap [<Enter> []<Left><CR><ESC><S-o>
+inoremap < <><Left>
+inoremap <<Enter> <><Left><CR><ESC><S-o>
+
 " Visualize Tab, Space, Emptyline
 set list
 set listchars=tab:>.,trail:･,extends:>,precedes:<,nbsp:%

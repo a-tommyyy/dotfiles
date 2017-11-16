@@ -4,20 +4,20 @@
 
 [[plugins]] # def end の自動入力
 repo = 'tpope/vim-endwise.git'
-on_ft = 'ruby'
+on_ft = ['ruby', 'eruby']
 
 [[plugins]] # 
 repo = 'vim-ruby/vim-ruby'
-on_ft = 'ruby'
+on_ft = ['ruby', 'eruby']
 
 [[plugins]] # Railsプロジェクト用プラグイン
 repo = 'taichouchou2/vim-rails'
-on_ft = 'ruby'
+on_ft = ['ruby', 'eruby']
 
 [[plugins]] # Railsプロジェクト用プラグイン
 repo = 'romanvbabenko/rails.vim'
-on_ft = 'ruby'
+on_ft = ['ruby', 'eruby']
 
 [[plugins]] # RSpecをvimから実行
 repo = 'thoughtbot/vim-rspec'
-on_ft = 'ruby'
+on_ft = ['ruby', 'eruby']
