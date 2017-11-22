@@ -16,6 +16,7 @@ set autoindent
 set smarttab
 " change tab setting in case by filetypes
 filetype plugin indent on
+autocmd BufRead,BufNewFile *.etl.erb setf ruby
 
 " Delete Highlight by Esc twice
 nmap <ESC><ESC> ;nohlsearch<CR><ESC>
@@ -73,7 +74,7 @@ set textwidth=0                                 "テキストの最大幅を無�
 set shiftround                                  "インデントをshiftwidthの倍数に
 set history=10000                               "コマンド、検索の履歴を１万個まで
 set mouse=a                                     "マウスモード有効
-inoremap jj <ESC>                               "入力モード中に素早くjjと入力した時はESC
+inoremap qq <ESC>                               "入力モード中に素早くjjと入力した時はESC
 let g:indent_guides_enable_on_vim_startup = 1   " Vim を立ち上げたと時に、自動的にvim-indent-guidesをオンにする
 
 " #####################################
