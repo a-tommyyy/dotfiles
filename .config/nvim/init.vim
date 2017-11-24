@@ -16,7 +16,10 @@ set autoindent
 set smarttab
 " change tab setting in case by filetypes
 filetype plugin indent on
-autocmd BufRead,BufNewFile *.etl.erb setf ruby
+
+" filetype
+filetype on
+au BufNewFile,BufRead *.etl.erb setf ruby
 
 " Delete Highlight by Esc twice
 nmap <ESC><ESC> ;nohlsearch<CR><ESC>
