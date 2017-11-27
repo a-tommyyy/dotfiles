@@ -106,6 +106,10 @@ alias vim="nvim"
 alias ll='ls -al'
 alias la='ls -a'
 
+if [ $SHLVL = 1 ]; then
+    alias tmux="tmux -2 attach || tmux -2 new-session \; source-file ~/.tmux/new-session"
+fi
+
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 export RBENV_ROOT="$HOME/.rbenv"
