@@ -25,15 +25,9 @@ au BufNewFile,BufRead *.etl.erb setf ruby
 nmap <ESC><ESC> ;nohlsearch<CR><ESC>
 
 " Complete brackets
-inoremap { {}<Left>
 inoremap {<Enter> {}<Left><CR><ESC><S-o>
-inoremap ( ()<ESC>i
 inoremap (<Enter> ()<Left><CR><ESC><S-o>
-inoremap " ""<Left>
-inoremap ' ''<Left>
-inoremap [ []<Left>
 inoremap [<Enter> []<Left><CR><ESC><S-o>
-inoremap < <><Left>
 inoremap <<Enter> <><Left><CR><ESC><S-o>
 
 " Visualize Tab, Space, Emptyline
