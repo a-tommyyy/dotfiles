@@ -3,6 +3,10 @@
 " #####################################
 " show row number
 set number
+hi LineNr ctermbg=0 ctermfg=0
+hi CursorLineNr ctermbg=4 ctermfg=0
+set cursorline
+hi clear CursorLine
 
 " disable swapfile
 set noswapfile
@@ -71,7 +75,7 @@ set textwidth=0                                 "テキストの最大幅を無�
 set shiftround                                  "インデントをshiftwidthの倍数に
 set history=10000                               "コマンド、検索の履歴を１万個まで
 set mouse=a                                     "マウスモード有効
-inoremap qq <ESC>                               "入力モード中に素早くjjと入力した時はESC
+inoremap jj <ESC>                               "入力モード中に素早くjjと入力した時はESC
 let g:indent_guides_enable_on_vim_startup = 1   " Vim を立ち上げたと時に、自動的にvim-indent-guidesをオンにする
 
 " #####################################
@@ -117,7 +121,7 @@ if dein#load_state(s:dein_dir)
     call dein#load_toml(s:toml_dir . '/lazy.toml', {'lazy': 1})
     call dein#load_toml(s:toml_dir . '/ruby.toml', {'lazy': 1})
     call dein#load_toml(s:toml_dir . '/other.toml', {'lazy': 1})
-    call dein#load_toml(s:toml_dir . '/python.toml', {'lazy': 0})
+    call dein#load_toml(s:toml_dir . '/python.toml', {'lazy': 1})
 
     call dein#end()
     call dein#save_state()
