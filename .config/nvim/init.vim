@@ -7,7 +7,6 @@ hi LineNr ctermbg=0 ctermfg=0
 hi CursorLineNr ctermbg=4 ctermfg=0
 set cursorline
 hi clear CursorLine
-
 " disable swapfile
 set noswapfile
 
@@ -47,8 +46,7 @@ set showmatch                                   "閉じカッコが入力時対�
 set backspace=indent,eol,start                  "バックスペースで各種消せるよう
 set virtualedit=block
 
-" Search
-set ignorecase                                  "検索時大文字小文字を区別しない
+" Search set ignorecase                                  "検索時大文字小文字を区別しない
 set smartcase                                   "大文字を含めた検索はその通りに検索する
 set incsearch                                   "インクリメンタルサーチを行う
 set nohlsearch                                  "検索結果をハイライト表示しない
@@ -131,6 +129,12 @@ if has('vim_starting') && dein#check_install()
     call dein#install()
 endif
 " }}}
+
+" #####################################
+" ### Visual Settings
+" #####################################
+highlight Normal ctermbg=none
+highlight LineNr ctermbg=none
 
 " #####################################
 " ### Tab Split settings
