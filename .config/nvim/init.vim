@@ -7,7 +7,6 @@ hi LineNr ctermbg=0 ctermfg=0
 hi CursorLineNr ctermbg=4 ctermfg=0
 set cursorline
 hi clear CursorLine
-" disable swapfile
 set noswapfile
 
 " tab default
@@ -22,7 +21,7 @@ filetype plugin indent on
 
 " filetype
 filetype on
-au BufNewFile,BufRead *.etl.erb setf ruby
+au BufNewFile,BufRead *.etl.* setf ruby
 
 " Delete Highlight by Esc twice
 nmap <ESC><ESC> ;nohlsearch<CR><ESC>
@@ -74,7 +73,6 @@ set shiftround                                  "インデントをshiftwidthの
 set history=10000                               "コマンド、検索の履歴を１万個まで
 set mouse=a                                     "マウスモード有効
 inoremap jj <ESC>                               "入力モード中に素早くjjと入力した時はESC
-let g:indent_guides_enable_on_vim_startup = 1   " Vim を立ち上げたと時に、自動的にvim-indent-guidesをオンにする
 
 " #####################################
 " ### Python provider
@@ -133,6 +131,7 @@ endif
 " #####################################
 " ### Visual Settings
 " #####################################
+let g:indent_guides_enable_on_vim_startup = 1   " Vim を立ち上げたと時に、自動的にvim-indent-guidesをオンにする
 highlight Normal ctermbg=none
 highlight LineNr ctermbg=none
 
@@ -162,3 +161,4 @@ nnoremap ss :<C-u>sp<CR>
 nnoremap sv :<C-u>vs<CR>
 nnoremap sq :<C-u>q<CR>
 nnoremap sQ :<C-u>bd<CR>
+

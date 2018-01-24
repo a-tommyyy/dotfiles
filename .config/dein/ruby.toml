@@ -12,10 +12,10 @@ on_ft = ['ruby', 'eruby']
 
 [[plugins]] # Railsプロジェクト用プラグイン
 repo = 'taichouchou2/vim-rails'
-hook_post_source = '''
+on_ft = ['ruby', 'eruby']
+hook_add = '''
   let g:rails_no_abbreviations = 1
 '''
-on_ft = ['ruby', 'eruby']
 
 [[plugins]] # Railsプロジェクト用プラグイン
 repo = 'romanvbabenko/rails.vim'
