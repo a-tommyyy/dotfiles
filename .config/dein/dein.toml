@@ -79,6 +79,15 @@ call denite#custom#var('grep', 'recursive_opts', [])
 '''
 
 [[plugins]]
+repo = 'airblade/vim-gitgutter'
+hook_add = '''
+    au VimEnter * GitGutter
+'''
+hook_source = '''
+    let g:gitgutter_enable = 1
+'''
+    
+[[plugins]]
 repo = 'vim-airline/vim-airline'
 hook_add = '''
     let g:airline_powerline_fonts = 1
@@ -154,6 +163,9 @@ hook_add = '''
     nnoremap <silent><C-l> :TagbarToggle<CR>
     let g:tagbar_width = 30
     let g:tagbar_autoshowtag = 1
+'''
+hook_source = '''
+    autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
     let g:tagbar_type_ruby = {
     \ 'kinds' : [
         \ 'm:modules',

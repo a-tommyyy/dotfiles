@@ -21,9 +21,9 @@ filetype plugin indent on
 
 " filetype
 filetype on
-au BufNewFile,BufRead *.etl.* setf ruby
+au BufNewFile,BufRead *.etl.erb setf ruby
 
-" Delete Highlight by Esc twice
+" Delete Highlight y Esc twice
 nmap <ESC><ESC> ;nohlsearch<CR><ESC>
 
 " Complete brackets
@@ -45,7 +45,7 @@ set showmatch                                   "閉じカッコが入力時対�
 set backspace=indent,eol,start                  "バックスペースで各種消せるよう
 set virtualedit=block
 
-" Search set ignorecase                                  "検索時大文字小文字を区別しない
+" Search set ignorecase                         "検索時大文字小文字を区別しない
 set smartcase                                   "大文字を含めた検索はその通りに検索する
 set incsearch                                   "インクリメンタルサーチを行う
 set nohlsearch                                  "検索結果をハイライト表示しない
