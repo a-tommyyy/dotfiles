@@ -116,3 +116,7 @@ export RBENV_ROOT="$HOME/.rbenv"
 export PATH="$RBENV_ROOT/bin:$PATH"
 eval "$(rbenv init -)"
 eval "$(pyenv init -)"
+
+if [ -f ~/.phpbrew/bashrc ]; then
+    source ~/.phpbrew/bashrc
+fi

@@ -10,10 +10,10 @@ hi clear CursorLine
 set noswapfile
 
 " tab default
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set expandtab
-set softtabstop=4
+set softtabstop=2
 set autoindent
 set smarttab
 " change tab setting in case by filetypes
