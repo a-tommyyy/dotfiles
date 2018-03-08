@@ -112,8 +112,7 @@
 					"c":  "COMMND",
 					"cv": "VIM·EX",
 					"ce": "NRM·EX",
-					"r":  "PROMPT",
-					"rm": "-MORE-",
+					"r":  "PROMPT", "rm": "-MORE-",
 					"r?": "CNFIRM",
 					"!":  "!SHELL"
 				}
