@@ -7,15 +7,13 @@ hi LineNr ctermbg=0 ctermfg=0
 hi CursorLineNr ctermbg=4 ctermfg=0
 set cursorline
 hi clear CursorLine
-
-" disable swapfile
 set noswapfile
 
 " tab default
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set expandtab
-set softtabstop=4
+set softtabstop=2
 set autoindent
 set smarttab
 " change tab setting in case by filetypes
@@ -25,7 +23,7 @@ filetype plugin indent on
 filetype on
 au BufNewFile,BufRead *.etl.erb setf ruby
 
-" Delete Highlight by Esc twice
+" Delete Highlight y Esc twice
 nmap <ESC><ESC> ;nohlsearch<CR><ESC>
 
 " Complete brackets
@@ -47,8 +45,7 @@ set showmatch                                   "閉じカッコが入力時対�
 set backspace=indent,eol,start                  "バックスペースで各種消せるよう
 set virtualedit=block
 
-" Search
-set ignorecase                                  "検索時大文字小文字を区別しない
+" Search set ignorecase                         "検索時大文字小文字を区別しない
 set smartcase                                   "大文字を含めた検索はその通りに検索する
 set incsearch                                   "インクリメンタルサーチを行う
 set nohlsearch                                  "検索結果をハイライト表示しない
@@ -76,7 +73,6 @@ set shiftround                                  "インデントをshiftwidthの
 set history=10000                               "コマンド、検索の履歴を１万個まで
 set mouse=a                                     "マウスモード有効
 inoremap jj <ESC>                               "入力モード中に素早くjjと入力した時はESC
-let g:indent_guides_enable_on_vim_startup = 1   " Vim を立ち上げたと時に、自動的にvim-indent-guidesをオンにする
 
 " #####################################
 " ### Python provider
@@ -133,6 +129,13 @@ endif
 " }}}
 
 " #####################################
+" ### Visual Settings
+" #####################################
+let g:indent_guides_enable_on_vim_startup = 1   " Vim を立ち上げたと時に、自動的にvim-indent-guidesをオンにする
+highlight Normal ctermbg=none
+highlight LineNr ctermbg=none
+
+" #####################################
 " ### Tab Split settings
 " #####################################
 nnoremap s <Nop>
@@ -158,3 +161,4 @@ nnoremap ss :<C-u>sp<CR>
 nnoremap sv :<C-u>vs<CR>
 nnoremap sq :<C-u>q<CR>
 nnoremap sQ :<C-u>bd<CR>
+

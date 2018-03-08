@@ -107,7 +107,7 @@ alias ll='ls -al'
 alias la='ls -a'
 
 if [ $SHLVL = 1 ]; then
-    alias tmux="tmux -2 attach || tmux -2 new-session \; source-file ~/.tmux/new-session"
+    alias tmux="tmux -2 attach || tmux -2 new-session"
 fi
 
 export PYENV_ROOT="$HOME/.pyenv"
@@ -116,3 +116,7 @@ export RBENV_ROOT="$HOME/.rbenv"
 export PATH="$RBENV_ROOT/bin:$PATH"
 eval "$(rbenv init -)"
 eval "$(pyenv init -)"
+
+if [ -f ~/.phpbrew/bashrc ]; then
+    source ~/.phpbrew/bashrc
+fi

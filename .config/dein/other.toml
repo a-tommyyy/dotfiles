@@ -29,6 +29,9 @@ on_ft = 'toml'
 [[plugins]] # jsonのシンタックス
 repo = 'elzr/vim-json'
 on_ft = 'json'
+hook_add = '''
+let g:vim_json_syntax_conceal = 0
+'''
 
 [[plugins]] # 直接DB触ったりSQL補完したり
 repo = 'vim-scripts/dbext.vim'
