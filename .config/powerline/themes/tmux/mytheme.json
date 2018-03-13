@@ -1,38 +1,50 @@
 {
-    "segments": {
-        "left": [
-            {
-                "function": "powerline.segments.common.sys.uptime",
-                "priority": 60
-            }
-        ],
-        "right": [
-            {
-                "function":"powerline.segments.common.sys.cpu_load_percent",
-                "before": "CPU:",
-                "priority": 50
-            },
-            {
-                "function":"powerline.segments.common.net.network_load",
-                "priority": 40
-            },
-            {
-                "function": "powerline.segments.common.bat.battery"
-            },
-            {
-                "function": "powerline.segments.common.time.date",
-                "name": "time",
-                "args": {
-                    "format": "%Y/%m/%d %H:%M",
-                    "istime": true
-                }
-            },
-            {
-                "function": "powerline.segments.common.env.user"
-            },
-            {
-                "function": "powerline.segments.common.net.hostname"
-            }
-        ]
-    }
+  "segments": {
+    "left": [
+      {
+        "function": "powerline.segments.common.sys.uptime",
+        "priority": 60
+      }
+    ],
+    "right": [
+      {
+        "function": "powerline.segments.common.vcs.branch",
+        "args": {
+          "status_color": true
+        }
+      },
+      {
+        "function": "powerline.segments.common.vcs.stash"
+      },
+      {
+        "function":"powerline.segments.common.sys.cpu_load_percent",
+        "before": "CPU:",
+        "priority": 50
+      },
+      {
+        "function":"powerline.segments.common.net.network_load",
+        "priority": 40
+      },
+      {
+        "function": "powerline.segments.common.bat.battery"
+      },
+      {
+        "function": "powerline.segments.common.time.date",
+        "name": "time",
+        "args": {
+          "format": "%Y/%m/%d %H:%M",
+          "istime": true
+        }
+      },
+      {
+        "function":"powerline.segments.common.wthr.weather" 
+      },
+      {
+        "function": "powerline.segments.common.env.user"
+      },
+      {
+        "function": "powerline.segments.common.net.hostname"
+      }
+    ]
+  }
 }
