@@ -8,13 +8,8 @@
     ],
     "right": [
       {
-        "function": "powerline.segments.common.vcs.branch",
-        "args": {
-          "status_color": true
-        }
-      },
-      {
-        "function": "powerline.segments.common.vcs.stash"
+        "function": "powerline_gitstatus.gitstatus",
+        "priority": 50
       },
       {
         "function":"powerline.segments.common.sys.cpu_load_percent",
