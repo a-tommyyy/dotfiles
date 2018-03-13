@@ -9,7 +9,7 @@
     "right": [
       {
         "function": "powerline_gitstatus.gitstatus",
-        "priority": 50
+        "priority": 70
       },
       {
         "function":"powerline.segments.common.sys.cpu_load_percent",
