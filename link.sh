@@ -8,8 +8,19 @@ do
   [ ${f} = ".bash_profile" ] && continue
   [ ${f} = ".git" ] && continue
   [ ${f} = ".gitignore" ] && continue
+  [ ${f} = ".gitmodules" ] && continue
+  [ ${f} = ".config" ] && continue
   ln -snfv ${DOT_DIRECTORY}/${f} ${HOME}/${f}
 done
+
+cd .config
+
+for f in ??*
+do
+  ln -snfv ${DOT_DIRECTORY}/.config/${f} ${HOME}/.config/${f}
+done
+
+cd ..
 
 # git submodule
 git submodule init && git submodule update
