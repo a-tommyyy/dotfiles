@@ -130,7 +130,7 @@
 
 # time.sh {
 	# date(1) format for the time. Americans might want to have "%I:%M %p".
-	export TMUX_POWERLINE_SEG_TIME_FORMAT="%H:%M"
+	export TMUX_POWERLINE_SEG_TIME_FORMAT="⌚ %H:%M"
 # }
 
 # uptime.sh {
@@ -146,7 +146,7 @@
 	# How often to update the weather in seconds.
 	export TMUX_POWERLINE_SEG_WEATHER_UPDATE_PERIOD="600"
 	# Name of GNU grep binary if in PATH, or path to it.
-	export TMUX_POWERLINE_SEG_WEATHER_GREP="/usr/local/bin/grep"
+	export TMUX_POWERLINE_SEG_WEATHER_GREP="/bin/grep"
 	
 	# Your location. Find a code that works for you:
 	# 1. Go to Yahoo weather http://weather.yahoo.com/
