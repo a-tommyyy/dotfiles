@@ -13,14 +13,9 @@ do
   ln -snfv ${DOT_DIRECTORY}/${f} ${HOME}/${f}
 done
 
-cd .config
-
-for f in ??*
-do
-  ln -snfv ${DOT_DIRECTORY}/.config/${f} ${HOME}/.config/${f}
-done
-
-cd ..
+ln -snfv ${DOT_DIRECTORY}/.config/dein ${HOME}/.config/dein
+ln -snfv ${DOT_DIRECTORY}/.config/nvim ${HOME}/.config/nvim
+ln -snfv ${DOT_DIRECTORY}/.config/powerline ${HOME}/.config/powerline
 
 # git submodule
 git submodule init && git submodule update
