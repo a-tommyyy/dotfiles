@@ -13,9 +13,16 @@ do
   ln -snfv ${DOT_DIRECTORY}/${f} ${HOME}/${f}
 done
  
-ln -snfv ${DOT_DIRECTORY}/.config/dein ${HOME}/.config/dein
-ln -snfv ${DOT_DIRECTORY}/.config/nvim ${HOME}/.config/nvim
-ln -snfv ${DOT_DIRECTORY}/.config/powerline ${HOME}/.config/powerline
+cd .config
+
+for f in ??*
+do
+    if [ -e ${HOME}/.config/${f} ]; then
+        echo ${f} already exist.
+    else
+        ln -sv ${DOT_DIRECTORY}/.config/${f} ${HOME}/.config/${f}
+    fi
+done
 
 #if [ "$(uname)" == 'Darwin' ]; then
 #  OS='Mac'
@@ -24,6 +31,8 @@ ln -snfv ${DOT_DIRECTORY}/.config/powerline ${HOME}/.config/powerline
 #else
 #  echo "Platform ($(uname-a)) is not supported."
 #fi
+
+cd ..
 
 # git submodule
 git submodule init && git submodule update
