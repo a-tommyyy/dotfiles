@@ -13,9 +13,9 @@ do
   ln -snfv ${DOT_DIRECTORY}/${f} ${HOME}/${f}
 done
  
-ln -snfv ${DOT_DIRECTORY}/.config/dein -t ${HOME}/.config/dein
-ln -snfv ${DOT_DIRECTORY}/.config/nvim -t ${HOME}/.config/nvim
-ln -snfv ${DOT_DIRECTORY}/.config/powerline -t ${HOME}/.config/powerline
+ln -snfv ${DOT_DIRECTORY}/.config/dein ${HOME}/.config/dein
+ln -snfv ${DOT_DIRECTORY}/.config/nvim ${HOME}/.config/nvim
+ln -snfv ${DOT_DIRECTORY}/.config/powerline ${HOME}/.config/powerline
 
 #if [ "$(uname)" == 'Darwin' ]; then
 #  OS='Mac'
