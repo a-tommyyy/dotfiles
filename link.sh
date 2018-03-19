@@ -36,8 +36,8 @@ cd ${DOT_DIRECTORY}
 
 # git submodule
 git submodule init && git submodule update
-ln -snfv .tmux/mytheme.sh .tmux/powerline/themes/mytheme.sh
-ln -snfv .tmux/vcs_branch.sh .tmux/powerline/segments/vcs_branch.sh
+ln -snfv ${DOT_DIRECTORY}/.tmux/mytheme.sh ${HOME}/.tmux/powerline/themes/mytheme.sh
+ln -snfv ${DOT_DIRECTORY}/.tmux/vcs_branch.sh ${HOME}/.tmux/powerline/segments/vcs_branch.sh
 sudo cp jp /usr/share/X11/xkb/symbols/
 
 
