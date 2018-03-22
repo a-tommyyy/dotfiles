@@ -32,11 +32,16 @@ done
 #  echo "Platform ($(uname-a)) is not supported."
 #fi
 
-cd ..
+cd ${DOT_DIRECTORY}
 
 # git submodule
 git submodule init && git submodule update
 ln -snfv ${DOT_DIRECTORY}/.tmux/mytheme.sh ${HOME}/.tmux/powerline/themes/mytheme.sh
 ln -snfv ${DOT_DIRECTORY}/.tmux/vcs_branch.sh ${HOME}/.tmux/powerline/segments/vcs_branch.sh
+<<<<<<< HEAD
+=======
+sudo cp jp /usr/share/X11/xkb/symbols/
+
+>>>>>>> d9d317fa4f22f7543a6a55d0e5940695274d0ff3
 
 echo $(tput setaf 2)Deploy dotfiles complete!. ✔︎$(tput sgr0)o
