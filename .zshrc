@@ -92,9 +92,21 @@ source $ZSH/oh-my-zsh.sh
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
+  github
   ruby
+  rails
+  rake
+  rbenv
+  gem
+  tmux
+  go
+  golang
+  npm
+  pip
+  pyenv
+  python
+  django
   osx
   brew
-  rails
   emoji-clock
 )
