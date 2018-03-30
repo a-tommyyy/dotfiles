@@ -22,6 +22,8 @@ filetype plugin indent on
 " filetype
 filetype on
 au BufNewFile,BufRead *.etl.erb setf ruby
+set fileencoding=utf-8
+set ambiwidth=double
 
 " Delete Highlight y Esc twice
 nmap <ESC><ESC> ;nohlsearch<CR><ESC>
@@ -118,6 +120,9 @@ if dein#load_state(s:dein_dir)
     call dein#load_toml(s:toml_dir . '/ruby.toml', {'lazy': 1})
     call dein#load_toml(s:toml_dir . '/other.toml', {'lazy': 1})
     call dein#load_toml(s:toml_dir . '/python.toml', {'lazy': 1})
+    call dein#load_toml(s:toml_dir . '/go.toml', {'lazy': 1})
+    call dein#load_toml(s:toml_dir . '/html.toml', {'lazy': 1})
+    call dein#load_toml(s:toml_dir . '/js.toml', {'lazy': 1})
 
     call dein#end()
     call dein#save_state()
