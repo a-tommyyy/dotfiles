@@ -5,6 +5,9 @@
 [[plugins]] # markdownのシンタックス
 repo = 'rcmdnk/vim-markdown'
 on_ft = ['markdown', 'mkd']
+hook_add = '''
+  let g:vim_markdown_conceal = 0
+'''
 
 [[plugins]] # markdownのtableの整形
 repo = 'godlygeek/tabular'
