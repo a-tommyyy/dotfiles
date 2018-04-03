@@ -1,10 +1,10 @@
-if [ -f ~/.Xmodmap ]; then
-    xmodmap ~/.Xmodmap > /dev/null 2>&1
+if [ $SHLVL = 1 ]; then
+    alias tmux="tmux -2 attach || tmux -2 new-session"
 fi
 
 alias rspec="bundle exec rspec"
 alias guard="bundle exec guard"
-
-SWAGGER_ID="adwh_user"
-SWAGGER_PASS="terminal"
-#export SWAGGER_ID SWAGGER_PASS
+alias vim="nvim"
+alias ll='ls -l'
+alias la='ls -a'
+alias lla='ls -al'
