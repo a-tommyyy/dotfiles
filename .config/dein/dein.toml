@@ -88,25 +88,23 @@ hook_source = '''
 '''
     
 [[plugins]]
-repo = 'powerline/powerline'
-
-#[[plugins]]
-#repo = 'vim-airline/vim-airline'
-#hook_add = '''
-#    let g:airline_powerline_fonts = 1
-#    let g:airline#extensions#tabline#enabled = 1
-#    let g:airline_section_z = airline#section#create(['windowswap', '%3p%% ', 'linenr', ':%3v'])
-#    let g:airline#extensions#virtualenv#enabled = 1
-#    let g:airline#extensions#hunks#enabled = 0
-#    let g:airline#extensions#ale#enabled = 1
-#    let g:airline#extensions#ale#error_symbol = 'E:'
-#    let g:airline#extensions#ale#warning_symbol = 'W:'
-#'''
+repo = 'vim-airline/vim-airline'
+hook_add = '''
+let g:airline#extensions#tabline#formatter = 'unique_tail'
+" パワーラインでかっこよく
+let g:airline_powerline_fonts = 0
+" タブバーをかっこよく
+let g:airline#extensions#tabline#enabled = 0
+" 選択行列の表示をカスタム(デフォルトだと長くて横幅を圧迫するので最小限に)
+let g:airline_section_z = airline#section#create(['windowswap', '%3p%% ', 'linenr', ':%3v'])
+" gitのHEADから変更した行の+-を非表示(vim-gitgutterの拡張)
+let g:airline#extensions#hunks#enabled = 0
+'''
 
 [[plugins]]
 repo = 'vim-airline/vim-airline-themes'
 hook_add = '''
-    let g:airline_theme='hybrid'
+    let g:airline_theme='papercolor'
 '''
 
 [[plugins]]

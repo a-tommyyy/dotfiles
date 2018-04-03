@@ -8,6 +8,9 @@ hook_add = '''
 [[plugins]]
 repo = 'mattn/emmet-vim'
 on_ft = ['html', 'css']
+hook_add = '''
+let g:user_emmet_leader_key='<C-Q>'
+'''
 
 [[plugins]]
 repo = 'hail2u/vim-css3-syntax'
