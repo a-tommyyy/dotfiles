@@ -26,5 +26,9 @@ repo = 'thoughtbot/vim-rspec'
 on_ft = ['ruby', 'eruby']
 
 [[plugins]]
-repo = 'slim-template/vim-slim'
-on_ft = ['slim']
+repo = 'Shougo/deoplete-rct'
+on_ft = ['ruby']
+
+[[plugins]]
+repo = 'fishbullet/deoplete-ruby'
+on_ft = ['ruby']

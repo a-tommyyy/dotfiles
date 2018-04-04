@@ -13,3 +13,6 @@ on_ft = ['html', 'css']
 repo = 'cakebaker/scss-syntax.vim'
 on_ft = ['html', 'css']
 
+[[plugins]]
+repo = 'slim-template/vim-slim'
+on_ft = ['slim']
