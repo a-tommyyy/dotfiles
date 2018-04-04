@@ -17,6 +17,7 @@ set softtabstop=2
 set autoindent
 set smarttab
 
+
 " change tab setting in case by filetypes
 filetype plugin indent on
 
@@ -185,3 +186,5 @@ nmap <silent> <C-u>; :<C-u>Denite -resume -immediately -select=+1<CR>
 nmap <silent> <C-u>- :<C-u>Denite -resume -immediately -select=-1<CR>
 nmap <silent> <C-u><C-d> :<C-u>call denite#start([{'name': 'file_rec', 'args': ['~/dotfiles']}])<CR>
 nnoremap ml :<C-u>call denite#start([{'name': 'file_rec', 'args': [g:memolist_path]}])<CR>
+" 補完のプレビューを消す
+set completeopt-=preview

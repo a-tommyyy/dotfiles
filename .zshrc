@@ -110,3 +110,7 @@ plugins=(
   brew
   emoji-clock
 )
+
+eval "$(rbenv init -)"
+eval "$(goenv init -)"
+eval "$(pyenv init -)"

@@ -5,6 +5,9 @@
 [[plugins]]
 repo = 'zchee/deoplete-jedi'
 on_ft = 'python'
+hook_post_source = '''
+  let g:deoplete#sources#jedi#show_docstring = 0
+'''
 
 [[plugins]]
 repo = 'jmcantrell/vim-virtualenv'
