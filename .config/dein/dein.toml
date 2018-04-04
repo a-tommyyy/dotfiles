@@ -1,19 +1,55 @@
 [[plugins]]
 repo = 'Shougo/dein.vim'
 
+# ====================
+# 見た目周り
+# ====================
+# テーマ
 [[plugins]]
 repo = 'kristijanhusak/vim-hybrid-material'
 hook_add = '''
     set t_Co=256
     set background=dark
     syntax on
-    colorscheme hybrid_reverse
+    colorscheme hybrid_reverse '''
+
+# パワーライン
+[[plugins]]
+repo = 'vim-airline/vim-airline'
+hook_add = '''
+let g:airline#extensions#tabline#formatter = 'unique_tail'
+let g:airline_powerline_fonts = 0
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_section_z = airline#section#create(['windowswap', '%3p%% ', 'linenr', ':%3v'])
+let g:airline#extensions#hunks#enabled = 0
 '''
 
+# パワーラインのテーマ
+[[plugins]]
+repo = 'vim-airline/vim-airline-themes'
+hook_add = '''
+  let g:airline_theme='papercolor'
+  let g:airline#extensions#ale#enabled = 1
+'''
+
+[[plugins]]
+repo = 'Yggdroot/indentLine'
+hook_add = '''
+  let g:indent_guides_enable_on_vim_startup = 1
+  let g:indent_guides_start_level = 2
+  let g:indent_guides_guide_size = 1
+  let g:indent_guides_exclude_filetypes = ['help', 'nerdtree', 'tagbar', 'unite']
+'''
+
+# =-=-=-=-=-=-=-=-=-=-=
+# 大事なやつ
+# =-=-=-=-=-=-=-=-=-=-=
+# 非同期処理を実現してくれるやつ
 [[plugins]]
 repo = 'Shougo/vimproc.vim'
 build = 'make'
 
+# 非同期補完
 [[plugins]]
 repo = 'Shougo/deoplete.nvim'
 on_event = 'InsertCharPre'
@@ -33,77 +69,13 @@ hook_add = '''
 '''
 
 [[plugins]]
-repo = 'scrooloose/nerdtree'
-hook_add = '''
-    nnoremap <silent><C-e> :NERDTreeToggle<CR>
-    nmap <Leader><Tab> <C-w>w
-    autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-'''
-
-[[plugins]]
-repo = 'Shougo/denite.nvim'
-depends = ['neomru.vim']
-on_event = 'BufRead'
-hook_add = '''
-nmap <silent> <C-u><C-t> :<C-u>Denite filetype<CR>
-nmap <silent> <C-u><C-p> :<C-u>Denite file_rec<CR>
-nmap <silent> <C-u><C-j> :<C-u>Denite line<CR>
-nmap <silent> <C-u><C-g> :<C-u>Denite grep<CR>
-nmap <silent> <C-u><C-]> :<C-u>DeniteCursorWord grep<CR>
-nmap <silent> <C-u><C-u> :<C-u>Denite file_mru<CR>
-nmap <silent> <C-u><C-y> :<C-u>Denite neoyank<CR>
-nmap <silent> <C-u><C-r> :<C-u>Denite -resume<CR>
-nmap <silent> <C-u>; :<C-u>Denite -resume -immediately -select=+1<CR>
-nmap <silent> <C-u>- :<C-u>Denite -resume -immediately -select=-1<CR>
-nmap <silent> <C-u><C-d> :<C-u>call denite#start([{'name': 'file_rec', 'args': ['~/dotfiles']}])<CR>
-nnoremap ml :<C-u>call denite#start([{'name': 'file_rec', 'args': [g:memolist_path]}])<CR>
-'''
-
-hook_post_source = '''
-call denite#custom#var('file_rec', 'command',
-\ ['pt', '--follow', '--nocolor', '--nogroup', '--hidden', '-g', ''])
-call denite#custom#var('grep', 'command',
-\ ['pt', '--nogroup', '--nocolor', '--smart-case', '--hidden'])
-call denite#custom#var('grep', 'default_opts', [])
-call denite#custom#var('grep', 'recursive_opts', [])
-'''
-
-[[plugins]]
-repo = 'airblade/vim-gitgutter'
-    
-[[plugins]]
-repo = 'vim-airline/vim-airline'
-hook_add = '''
-let g:airline#extensions#tabline#formatter = 'unique_tail'
-let g:airline_powerline_fonts = 0
-let g:airline#extensions#tabline#enabled = 1
-let g:airline_section_z = airline#section#create(['windowswap', '%3p%% ', 'linenr', ':%3v'])
-let g:airline#extensions#hunks#enabled = 0
-'''
-
-[[plugins]]
-repo = 'vim-airline/vim-airline-themes'
-hook_add = '''
-  let g:airline_theme='papercolor'
-'''
-
-[[plugins]]
-repo = 'Yggdroot/indentLine'
-hook_add = '''
-  let g:indent_guides_enable_on_vim_startup = 1
-  let g:indent_guides_start_level = 2
-  let g:indent_guides_guide_size = 1
-  let g:indent_guides_exclude_filetypes = ['help', 'nerdtree', 'tagbar', 'unite']
-'''
-
-[[plugins]]
-repo = 'tpope/vim-fugitive'
-
-[[plugins]]
 repo = 'Shougo/neosnippet-snippets'
 
 [[plugins]]
 repo = 'Shougo/neosnippet.vim'
+on_i  = 1
+on_ft = ['snippet']
+depends = ['neosnippet-snippets']
 hook_add = '''
   imap <C-k> <Plug>(neosnippet_expand_or_jump)
   smap <C-k> <Plug>(neosnippet_expand_or_jump)
@@ -112,18 +84,8 @@ hook_add = '''
     set conceallevel=2 concealcursor=niv
   endif
 '''
-on_i  = 1
-on_ft = ['snippet']
-depends = ['neosnippet-snippets']
 
-[[plugins]]
-repo = 'majutsushi/tagbar'
-hook_add = '''
-    nnoremap <silent><C-l> :TagbarToggle<CR>
-    let g:tagbar_width = 30
-    let g:tagbar_autoshowtag = 1
-'''
-
+# htmlタグ補完
 [[plugins]]
 repo = 'mattn/emmet-vim'
 hook_add = '''
@@ -133,7 +95,34 @@ hook_add = '''
 [[plugins]]
 repo = 'w0rp/ale'
 hook_add = '''
+  let g:ale_sign_warning = '**'
   let g:LanguageClient_serverCommands = {
       \ 'vue': ['vls'],
       \ }
+  let g:ale_fixers = {
+      \ 'javascript': ['eslint'],
+      \ }
+  let g:ale_sign_column_always = 1
+  let g:ale_lint_on_enter = 0
+  let g:ale_open_list = 1
+  let g:ale_keep_list_window_open = 0
 '''
+
+# ====================
+# ファイル操作周り
+# ====================
+# ファイルツリーのやつ
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+hook_add = '''
+    nnoremap <silent><C-e> :NERDTreeToggle<CR>
+    nmap <Leader><Tab> <C-w>w
+    autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+'''
+
+# ====================
+# Git関連
+# ====================
+[[plugins]]
+repo = 'airblade/vim-gitgutter'
+    
