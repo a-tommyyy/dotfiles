@@ -11,5 +11,3 @@ export PATH=$RBENV_ROOT/bin:$PATH
 if [ -f ~/.phpbrew/bashrc ]; then
     source ~/.phpbrew/bashrc
 fi
-
-echo "zshenv loaded."
