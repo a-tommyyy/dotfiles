@@ -8,5 +8,3 @@ alias vim="nvim"
 alias ll='ls -l'
 alias la='ls -a'
 alias lla='ls -al'
-
-echo "zprofile loaded."

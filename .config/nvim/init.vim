@@ -135,13 +135,6 @@ endif
 " }}}
 
 " #####################################
-" ### Visual Settings
-" #####################################
-let g:indent_guides_enable_on_vim_startup = 1   " Vim を立ち上げたと時に、自動的にvim-indent-guidesをオンにする
-highlight Normal ctermbg=none
-highlight LineNr ctermbg=none
-
-" #####################################
 " ### Tab Split settings
 " #####################################
 nnoremap s <Nop>
