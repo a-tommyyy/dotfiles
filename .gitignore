@@ -1,5 +1,4 @@
 .config/*
 !.config/dein
 !.config/nvim
-.tmux/powerline
 *.log
