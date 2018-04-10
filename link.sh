@@ -52,8 +52,6 @@ cd ${DOT_DIRECTORY}
 
 # git submodule
 git submodule init && \
-git submodule update && \
-ln -snfv ${DOT_DIRECTORY}/themes/mytheme.sh ${HOME}/.tmux/powerline/themes/mytheme.sh && \
-ln -snfv ${DOT_DIRECTORY}/themes/vcs_branch.sh ${HOME}/.tmux/powerline/segments/vcs_branch.sh
+git submodule update
 
 echo $(tput setaf 2)Deploy dotfiles complete!. ✔︎$(tput sgr0)
