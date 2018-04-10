@@ -1,4 +1,6 @@
 #!/bin/bash
+sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+
 DOT_DIRECTORY="${HOME}/dotfiles"
 cd ${DOT_DIRECTORY}
 
@@ -35,8 +37,9 @@ done
 cd ${DOT_DIRECTORY}
 
 # git submodule
-git submodule init && git submodule update
-ln -snfv ${DOT_DIRECTORY}/themes/mytheme.sh ${HOME}/.tmux/powerline/themes/mytheme.sh
+git submodule init && \
+git submodule update && \
+ln -snfv ${DOT_DIRECTORY}/themes/mytheme.sh ${HOME}/.tmux/powerline/themes/mytheme.sh && \
 ln -snfv ${DOT_DIRECTORY}/themes/vcs_branch.sh ${HOME}/.tmux/powerline/segments/vcs_branch.sh
 
 echo $(tput setaf 2)Deploy dotfiles complete!. ✔︎$(tput sgr0)
