@@ -36,10 +36,10 @@ ZSH_THEME="spaceship"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -53,8 +53,6 @@ ZSH_THEME="spaceship"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
-
-source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
@@ -90,6 +88,7 @@ source $ZSH/oh-my-zsh.sh
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+  history
   docker
   git
   github
@@ -109,7 +108,17 @@ plugins=(
   osx
   brew
   emoji-clock
+  zsh-autosuggestions
+  zsh-syntax-highlighting
 )
+
+source $ZSH/oh-my-zsh.sh
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=242'
+
+# spaceship settings
+SPACESHIP_PACKAGE_SHOW="false"
+SPACESHIP_EXEC_TIME_SHOW="false"
+
 
 eval "$(rbenv init -)"
 eval "$(goenv init -)"
@@ -119,3 +128,5 @@ eval "$(ndenv init -)"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+echo "zshrc loaded.✔︎"

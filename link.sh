@@ -2,10 +2,18 @@
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)" && \
 ZSH_CUSTOM="$ZSH/custom"
 
-git --version 2>&1 >/dev/null && \
-mkdir "$ZSH_CUSTOM/themes/spaceship-prompt" && \
-git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" && \
-ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
+if git --version 2>&1 >/dev/null ; then
+  # spaceship zsh theme
+  mkdir "$ZSH_CUSTOM/themes/spaceship-prompt"
+  git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" && \
+  ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
+
+  # zsh-auto-suggestion
+  git clone https://github.com/zsh-users/zsh-autosuggestions.git "$ZSH_CUSTOM/plugins/zsh-autosuggestions"
+
+  # zsh-syntax-highlighting
+  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "$ZSH_CUSTOM/plugins/zsh-syntax-highlighting"
+fi
 
 DOT_DIRECTORY="${HOME}/dotfiles"
 cd ${DOT_DIRECTORY}
@@ -20,7 +28,7 @@ do
   [ ${f} = ".config" ] && continue
   ln -snfv ${DOT_DIRECTORY}/${f} ${HOME}/${f}
 done
- 
+
 cd .config
 
 for f in ??*
