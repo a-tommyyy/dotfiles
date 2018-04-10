@@ -1,6 +1,6 @@
 #!/bin/bash
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)" && \
-ZSH_CUSTOM="$HOME/.oh-my-zsh/custom"
+ZSH_CUSTOM="$ZSH/custom"
 
 git --version 2>&1 >/dev/null && \
 mkdir "$ZSH_CUSTOM/themes/spaceship-prompt" && \
