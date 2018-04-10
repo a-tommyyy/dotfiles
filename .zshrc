@@ -115,7 +115,6 @@ plugins=(
 
 
 # spaceship settings
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=242'
 SPACESHIP_PACKAGE_SHOW="false"
 SPACESHIP_EXEC_TIME_SHOW="false"
 SPACESHIP_PROMPT_ADD_NEWLINE="false"
@@ -136,6 +135,9 @@ SPACESHIP_GIT_STATUS_SUFFIX=""
 SPACESHIP_DOCKER_PREFIX=""
 
 source $ZSH/oh-my-zsh.sh
+
+# Zsh autosuggest option
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=242'
 
 eval "$(rbenv init -)"
 eval "$(goenv init -)"
