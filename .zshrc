@@ -90,6 +90,7 @@ COMPLETION_WAITING_DOTS="true"
 plugins=(
   history
   docker
+  docker-compose
   git
   github
   ruby
@@ -112,13 +113,29 @@ plugins=(
   zsh-syntax-highlighting
 )
 
-source $ZSH/oh-my-zsh.sh
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=242'
 
 # spaceship settings
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=242'
 SPACESHIP_PACKAGE_SHOW="false"
 SPACESHIP_EXEC_TIME_SHOW="false"
+SPACESHIP_PROMPT_ADD_NEWLINE="false"
+SPACESHIP_PROMPT_DEFAULT_PREFIX=""
+SPACESHIP_DIR_TRUNC_REPO="false"
+SPACESHIP_DIR_TRUNC="1"
 
+# Git
+SPACESHIP_GIT_SYMBOL=""
+SPACESHIP_GIT_BRANCH_PREFIX=""
+SPACESHIP_GIT_PREFIX='git:('
+SPACESHIP_GIT_SUFFIX=") "
+SPACESHIP_GIT_BRANCH_SUFFIX=""
+SPACESHIP_GIT_STATUS_PREFIX=""
+SPACESHIP_GIT_STATUS_SUFFIX=""
+
+# Docker
+SPACESHIP_DOCKER_PREFIX=""
+
+source $ZSH/oh-my-zsh.sh
 
 eval "$(rbenv init -)"
 eval "$(goenv init -)"

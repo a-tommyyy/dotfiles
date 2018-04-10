@@ -11,6 +11,8 @@ export PATH=$RBENV_ROOT/bin:$PATH
 export NDENV_ROOT=$HOME/.ndenv
 export PATH=$NDENV_ROOT/bin:$PATH
 
+export PATH=$HOME/bin:$PATH
+
 if [ -f ~/.phpbrew/bashrc ]; then
     source ~/.phpbrew/bashrc
 fi
