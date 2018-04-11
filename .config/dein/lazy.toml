@@ -5,9 +5,6 @@ hook_post_source = '''
     let g:tagbar_autoshowtag = 1
 '''
 
-[[plugins]]
-repo = 'tpope/vim-fugitive'
-
 # 暗黒の力
 [[plugins]]
 repo = 'Shougo/denite.nvim'
