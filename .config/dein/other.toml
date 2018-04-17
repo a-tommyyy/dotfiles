@@ -25,13 +25,6 @@ on_ft = ['markdown', 'mkd']
 repo = 'tyru/open-browser.vim'
 on_ft = ['markdown', 'mkd']
 
-[[plugins]]
-repo = 'junegunn/vim-easy-align'
-on_ft = ['markdown', 'mkd']
-hook_add = '''
-  au FileType markdown vmap <Bslash><Bslash> :EasyAlign*<Bar><Enter>
-'''
-
 [[plugins]] # tomlのシンタックス
 repo = 'cespare/vim-toml'
 on_ft = 'toml'

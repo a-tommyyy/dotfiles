@@ -47,6 +47,13 @@ hook_add = '''
   let g:indent_guides_exclude_filetypes = ['help', 'nerdtree', 'tagbar', 'unite']
 '''
 
+# 見た目綺麗に揃えるやつ
+[[plugins]]
+repo = 'junegunn/vim-easy-align'
+hook_add = '''
+  au FileType markdown vmap <Bslash><Bslash> :EasyAlign*<Bar><Enter>
+'''
+
 # =-=-=-=-=-=-=-=-=-=-=
 # 大事なやつ
 # =-=-=-=-=-=-=-=-=-=-=
