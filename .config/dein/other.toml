@@ -6,6 +6,7 @@
 repo = 'rcmdnk/vim-markdown'
 on_ft = ['markdown', 'mkd']
 hook_add = '''
+  let g:vim_markdown_folding_disabled = 1 
   let g:vim_markdown_conceal = 0
 '''
 
