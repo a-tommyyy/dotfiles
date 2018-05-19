@@ -1,6 +1,5 @@
 [[plugins]]
 repo = 'Shougo/dein.vim'
-
 # ====================
 # 見た目周り
 # ====================
@@ -84,12 +83,19 @@ hook_add = '''
       \ }
   let g:ale_fixers = {
       \ 'javascript': ['eslint'],
+      \ 'python': ['autopep8']
+      \ }
+  let g:ale_linters = {
+      \ 'python': ['flake8']
       \ }
   let g:ale_sign_column_always = 1
   let g:ale_lint_on_enter = 0
   let g:ale_lint_on_text_changed = 'never'
-  let g:ale_open_list = 1
+  let g:ale_open_list = 0
   let g:ale_keep_list_window_open = 0
+  let g:ale_echo_msg_error_str = 'E'
+  let g:ale_echo_msg_wargin_str = 'W'
+  let g:ale_echo_msg_format = '[%severity%] %s [%linter%]'
 '''
 
 # ====================
