@@ -136,6 +136,7 @@ SPACESHIP_GIT_STATUS_SUFFIX=""
 SPACESHIP_DOCKER_PREFIX=""
 
 source $ZSH/oh-my-zsh.sh
+source /usr/local/share/zsh/site-functions/_aws
 
 # Zsh autosuggest option
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=242'
