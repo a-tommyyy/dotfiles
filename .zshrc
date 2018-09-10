@@ -11,7 +11,6 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
-source /usr/local/share/zsh/site-functions/_aws
 
 eval "$(rbenv init -)"
 eval "$(goenv init -)"
@@ -29,6 +28,9 @@ alias lla='ls -al'
 alias fig='docker-compose'
 alias fir='docker-compose run --rm'
 alias fie='docker-compose exec'
+
+# studyplus
+PATH_TO_GITHUB_KEY=~/.ssh/id_rsa
 
 setopt print_eight_bit
 
