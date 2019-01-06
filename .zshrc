@@ -28,6 +28,7 @@ alias lla='ls -al'
 alias fig='docker-compose'
 alias fir='docker-compose run --rm'
 alias fie='docker-compose exec'
+export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
 
 # studyplus
 PATH_TO_GITHUB_KEY=~/.ssh/id_rsa
