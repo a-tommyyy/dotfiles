@@ -1,16 +1,7 @@
-#
-# Executes commands at the start of an interactive session.
-#
-# Authors:
-#   Sorin Ionescu <sorin.ionescu@gmail.com>
-#
-
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
-
-# Customize to your needs...
 
 eval "$(rbenv init -)"
 eval "$(goenv init -)"
@@ -29,9 +20,6 @@ alias fig='docker-compose'
 alias fir='docker-compose run --rm'
 alias fie='docker-compose exec'
 export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
-
-# studyplus
-PATH_TO_GITHUB_KEY=~/.ssh/id_rsa
 
 setopt print_eight_bit
 
