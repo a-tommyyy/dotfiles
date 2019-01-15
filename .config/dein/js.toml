@@ -1,7 +1,0 @@
-[[plugins]]
-repo = 'othree/yajs.vim'
-on_ft = ['html', 'javascript', 'javascript.jsx']
-
-[[plugins]]
-repo = 'posva/vim-vue'
-on_ft = ['vue', 'html', 'javascript', 'javascript.jsx']

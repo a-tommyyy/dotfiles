@@ -17,7 +17,6 @@ set softtabstop=2
 set autoindent
 set smarttab
 
-
 " change tab setting in case by filetypes
 filetype plugin indent on
 
@@ -40,7 +39,7 @@ inoremap <<Enter> <><Left><CR><ESC><S-o>
 set list
 set listchars=tab:>.,trail:･,extends:>,precedes:<,nbsp:%
 function! ZenkakuSpace()
-    highlight ZenkakuSpace cterm=reverse ctermfg=DarkMagenta gui=reverse guifg=DarkMagenta
+  highlight ZenkakuSpace cterm=reverse ctermfg=DarkMagenta gui=reverse guifg=DarkMagenta
 endfunction
 
 " edit
@@ -88,7 +87,7 @@ let g:python3_host_prog = $PYENV_ROOT.'/versions/3.6.0/bin/python'
 " #####################################
 " reset augroup
 augroup MyAutoCmd
-    autocmd!
+  autocmd!
 augroup END
 
 let $CACHE = empty($XDG_CACHE_HOME) ? expand('$HOME/.cache') : $XDG_CACHE_HOME
@@ -99,38 +98,30 @@ let $DATA = empty($XDG_DATA_HOME) ? expand('$HOME/.local/share') : $XDG_DATA_HOM
 let s:dein_dir = expand('$CACHE/dein')
 
 if &runtimepath !~# '/dein.vim'
-    let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
+  let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
 
-    " Auto Download
-    if !isdirectory(s:dein_repo_dir)
-        call system('git clone https://github.com/Shougo/dein.vim ' . shellescape(s:dein_repo_dir))
-    endif
+  " Auto Download
+  if !isdirectory(s:dein_repo_dir)
+    call system('git clone https://github.com/Shougo/dein.vim ' . shellescape(s:dein_repo_dir))
+  endif
 
-    execute 'set runtimepath^=' . s:dein_repo_dir
+  execute 'set runtimepath^=' . s:dein_repo_dir
 endif
 
 " dein.vim settings
 
 if dein#load_state(s:dein_dir)
-    call dein#begin(s:dein_dir)
+  call dein#begin(s:dein_dir)
 
-    let s:toml_dir = expand('$CONFIG/dein')
-
-    call dein#load_toml(s:toml_dir . '/dein.toml', {'lazy': 0})
-    call dein#load_toml(s:toml_dir . '/lazy.toml', {'lazy': 1})
-    call dein#load_toml(s:toml_dir . '/ruby.toml', {'lazy': 1})
-    call dein#load_toml(s:toml_dir . '/other.toml', {'lazy': 1})
-    call dein#load_toml(s:toml_dir . '/python.toml', {'lazy': 1})
-    call dein#load_toml(s:toml_dir . '/go.toml', {'lazy': 1})
-    call dein#load_toml(s:toml_dir . '/html.toml', {'lazy': 1})
-    call dein#load_toml(s:toml_dir . '/js.toml', {'lazy': 1})
-
-    call dein#end()
-    call dein#save_state()
+  let s:toml_dir = expand('$CONFIG/dein')
+  call dein#load_toml(s:toml_dir . '/dein.toml', {'lazy': 0})
+  call dein#load_toml(s:toml_dir . '/lazy.toml', {'lazy': 1})
+  call dein#end()
+  call dein#save_state()
 endif
 
 if has('vim_starting') && dein#check_install()
-    call dein#install()
+  call dein#install()
 endif
 " }}}
 
@@ -182,10 +173,24 @@ nmap <silent> <C-u><C-d> :<C-u>call denite#start([{'name': 'file_rec', 'args': [
 nnoremap ml :<C-u>call denite#start([{'name': 'file_rec', 'args': [g:memolist_path]}])<CR>
 " 補完のプレビューを消す
 set completeopt-=preview
-if exists('$TMUX')
-  let &t_SI = "\ePtmux;\e\e[5 q\e\\"
-  let &t_EI = "\ePtmux;\e\e[2 q\e\\"
-else
-  let &t_SI = "\e[5 q"
-  let &t_EI = "\e[2 q"
+let g:deoplete#enable_at_startup = 1
+inoremap <expr><tab> pumvisible() ? "\<C-n>" :
+      \ neosnippet#expandable_or_jumpable() ?
+      \    "\<Plug>(neosnippet_expand_or_jump)" : "\<tab>"
+imap <C-k> <Plug>(neosnippet_expand_or_jump)
+smap <C-k> <Plug>(neosnippet_expand_or_jump)
+xmap <C-k> <Plug>(neosnippet_expand_target)
+if has('conceal')
+  set conceallevel=2 concealcursor=niv
 endif
+let g:LanguageClient_serverCommands = {
+  \ 'ruby': ['solargraph', 'stdio'],
+\}
+call deoplete#custom#var('omni', 'input_patterns', {
+    \ 'ruby': ['[^. *\t]\.\w*', '[a-zA-Z_]\w*::'],
+\})
+
+set t_Co=256
+set background=dark
+syntax on
+colorscheme hybrid_reverse
