@@ -10,7 +10,7 @@ repo = 'vim-airline/vim-airline'
 [[plugins]]
 repo = 'vim-airline/vim-airline-themes'
 hook_add = '''
-let g:airline_theme='papercolor'
+let g:airline_theme='hybrid'
 let g:airline#extensions#ale#enabled = 1
 '''
 
@@ -29,9 +29,6 @@ nnoremap <silent><C-e> :NERDTreeToggle<CR>
 nmap <Leader><Tab> <C-w>w
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 '''
-
-[[plugins]]
-repo = 'airblade/vim-gitgutter'
 
 [[plugins]]
 repo = 'kristijanhusak/vim-hybrid-material'
@@ -57,21 +54,18 @@ repo = 'autozimu/LanguageClient-neovim'
 branch = 'next'
 build = 'bash install.sh'
 depends = 'Shougo/deoplete.nvim'
-################################################
-# Ruby
-################################################
-
-[[plugins]] # def end の自動入力
-repo = 'tpope/vim-endwise.git'
-on_ft = ['ruby', 'eruby']
 
 [[plugins]]
-repo = 'vim-ruby/vim-ruby'
-on_ft = ['ruby', 'eruby']
+repo = 'leafgarland/typescript-vim'
 
-[[plugins]] # Railsプロジェクト用プラグイン
-repo = 'taichouchou2/vim-rails'
-on_ft = ['ruby', 'eruby']
+[[plugins]]
+repo = 'mattn/emmet-vim'
 hook_add = '''
-let g:rails_no_abbreviations = 1
+  let g:user_emmet_leader_key='<C-Q>'
 '''
+
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+
+[[plugins]]
+repo = 'airblade/vim-gitgutter'
