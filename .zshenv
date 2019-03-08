@@ -16,8 +16,8 @@ export RBENV_ROOT=$HOME/.rbenv
 export PATH=$RBENV_ROOT/bin:$PATH
 
 # ndenv
-export NDENV_ROOT=$HOME/.ndenv
-export PATH=$NDENV_ROOT/bin:$PATH
+export NODENV_ROOT=$HOME/.nodenv
+export PATH=$NODENV_ROOT/bin:$PATH
 
 export PATH=$HOME/bin:$PATH
 export PATH_TO_GITHUB_KEY=~/.ssh/id_rsa
