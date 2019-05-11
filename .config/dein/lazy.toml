@@ -49,3 +49,7 @@ on_ft = ['html', 'css']
 [[plugins]]
 repo = 'cakebaker/scss-syntax.vim'
 on_ft = ['html', 'css']
+
+[[plugins]]
+repo = "fatih/vim-go"
+on_ft = ['go']

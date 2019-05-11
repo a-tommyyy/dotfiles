@@ -27,3 +27,13 @@ setopt print_eight_bit
 
 autoload -Uz compinit
 compinit
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[[ -f /Users/akifumitomiyama/.nodenv/versions/10.15.1/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/akifumitomiyama/.nodenv/versions/10.15.1/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[[ -f /Users/akifumitomiyama/.nodenv/versions/10.15.1/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/akifumitomiyama/.nodenv/versions/10.15.1/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
+# tabtab source for slss package
+# uninstall by removing these lines or running `tabtab uninstall slss`
+[[ -f /Users/akifumitomiyama/.nodenv/versions/10.15.1/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh ]] && . /Users/akifumitomiyama/.nodenv/versions/10.15.1/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh
