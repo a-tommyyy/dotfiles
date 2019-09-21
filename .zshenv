@@ -21,3 +21,5 @@ export PATH=$NDENV_ROOT/bin:$PATH
 
 export PATH=$HOME/bin:$PATH
 export PATH_TO_GITHUB_KEY=~/.ssh/id_rsa
+
+export PATH=$HOME/flutter/bin:$PATH
