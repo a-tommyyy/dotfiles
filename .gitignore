@@ -3,3 +3,4 @@
 !.config/nvim
 *.log
 .DS_Store
+.fonts/.uuid
