@@ -24,3 +24,7 @@ export PATH_TO_GITHUB_KEY=~/.ssh/id_rsa
 
 export PATH=$HOME/flutter/bin:$PATH
 export PATH=$HOME/.cargo/bin:$PATH
+
+# nvim
+export XDG_CONFIG_HOME=$HOME/.config
+export XDG_CACHE_HOME=$HOME/.cache
