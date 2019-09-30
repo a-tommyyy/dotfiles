@@ -28,6 +28,9 @@ setopt print_eight_bit
 autoload -Uz compinit
 compinit
 
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=242"
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+
 # tabtab source for serverless package
 # uninstall by removing these lines or running `tabtab uninstall serverless`
 [[ -f /Users/akifumitomiyama/.nodenv/versions/10.15.1/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/akifumitomiyama/.nodenv/versions/10.15.1/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
