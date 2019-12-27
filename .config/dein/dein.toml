@@ -56,9 +56,6 @@ build = 'bash install.sh'
 depends = 'Shougo/deoplete.nvim'
 
 [[plugins]]
-repo = 'leafgarland/typescript-vim'
-
-[[plugins]]
 repo = 'mattn/emmet-vim'
 hook_add = '''
   let g:user_emmet_leader_key='<C-Q>'
@@ -69,3 +66,9 @@ repo = 'tpope/vim-fugitive'
 
 [[plugins]]
 repo = 'airblade/vim-gitgutter'
+
+[[plugins]]
+repo = "leafgarland/typescript-vim"
+
+[[plugins]]
+repo = "Quramy/tsuquyomi"
