@@ -28,5 +28,3 @@ export PATH=$HOME/.cargo/bin:$PATH
 # nvim
 export XDG_CONFIG_HOME=$HOME/.config
 export XDG_CACHE_HOME=$HOME/.cache
-
-alias gbclean `git branch --merged|egrep -v '\*|develop|master'|xargs git branch -d`
