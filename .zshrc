@@ -23,6 +23,11 @@ alias fir='docker-compose run --rm'
 alias fie='docker-compose exec'
 export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
 
+# settings for using japanese input on manjaro
+export GTK_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
+export QT_IM_MODULE=fcitx
+
 setopt print_eight_bit
 
 autoload -Uz compinit
