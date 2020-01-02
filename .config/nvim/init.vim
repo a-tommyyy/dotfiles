@@ -171,17 +171,10 @@ function! s:denite_my_settings() abort
         \ denite#do_map('open_filter_buffer')
   nnoremap <silent><buffer><expr> <Space>
         \ denite#do_map('toggle_select').'j'
-  call denite#custom#var('file/rec', 'command',
-    \ ['ag', '--follow', '--nocolor', '--nogroup', '-g', ''])
-endfunction
-
-autocmd FileType denite-filter call s:denite_filter_my_settings()
-function! s:denite_filter_my_settings() abort
-  imap <silent><buffer> <C-o> <Plug>(denite_filter_quit)
 endfunction
 
 nmap <silent> <C-u><C-t> :<C-u>Denite filetype<CR>
-nmap <silent> <C-u><C-p> :<C-u>Denite file/rec<CR>
+nmap <silent> <C-u><C-p> :<C-u>Denite file/rec/git<CR>
 nmap <silent> <C-u><C-j> :<C-u>Denite line<CR>
 nmap <silent> <C-u><C-g> :<C-u>Denite grep<CR>
 nmap <silent> <C-u><C-b> :<C-u>Denite buffer<CR>
