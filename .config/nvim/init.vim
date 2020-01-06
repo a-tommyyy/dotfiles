@@ -74,7 +74,6 @@ set textwidth=0                                 "テキストの最大幅を無�
 set shiftround                                  "インデントをshiftwidthの倍数に
 set history=10000                               "コマンド、検索の履歴を１万個まで
 set mouse=a                                     "マウスモード有効
-inoremap jj <ESC>                               "入力モード中に素早くjjと入力した時はESC
 
 " #####################################
 " ### Python provider
@@ -182,9 +181,9 @@ nmap <silent> <C-u><C-]> :<C-u>DeniteCursorWord grep<CR>
 nmap <silent> <C-u><C-u> :<C-u>Denite file_mru<CR>
 nmap <silent> <C-u><C-y> :<C-u>Denite neoyank<CR>
 nmap <silent> <C-u><C-r> :<C-u>Denite -resume<CR>
-nmap <silent> <C-u><C-d> :<C-u>call denite#start([{'name': 'file/rec', 'args': ['~/dotfiles']}])<CR>
+tnoremap <silent> <ESC> <C-\><C-n>
 
-" settings for deplete
+" settings for deoplete
 " 補完のプレビューを消す
 set completeopt-=preview
 let g:deoplete#enable_at_startup = 1
@@ -197,12 +196,6 @@ xmap <C-k> <Plug>(neosnippet_expand_target)
 if has('conceal')
   set conceallevel=2 concealcursor=niv
 endif
-let g:LanguageClient_serverCommands = {
-  \ 'ruby': ['solargraph', 'stdio'],
-\}
-call deoplete#custom#var('omni', 'input_patterns', {
-    \ 'ruby': ['[^. *\t]\.\w*', '[a-zA-Z_]\w*::'],
-\})
 
 set t_Co=256
 set background=dark

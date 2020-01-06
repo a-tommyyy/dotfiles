@@ -6,7 +6,6 @@ repo = 'kristijanhusak/vim-hybrid-material'
 
 [[plugins]]
 repo = 'vim-airline/vim-airline'
-
 [[plugins]]
 repo = 'vim-airline/vim-airline-themes'
 hook_add = '''
