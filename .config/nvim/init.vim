@@ -28,6 +28,7 @@ set ambiwidth=double
 
 " Delete Highlight y Esc twice
 nmap <ESC><ESC> ;nohlsearch<CR><ESC>
+imap <C-[> <ESC>
 
 " Complete brackets
 inoremap {<Enter> {}<Left><CR><ESC><S-o>
