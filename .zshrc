@@ -45,3 +45,9 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 # tabtab source for slss package
 # uninstall by removing these lines or running `tabtab uninstall slss`
 [[ -f /Users/akifumitomiyama/.nodenv/versions/10.15.1/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh ]] && . /Users/akifumitomiyama/.nodenv/versions/10.15.1/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/plov.akifumitomiyama/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/plov.akifumitomiyama/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/plov.akifumitomiyama/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/plov.akifumitomiyama/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
