@@ -37,22 +37,13 @@ repo = 'Shougo/vimproc.vim'
 build = 'make'
 
 [[plugins]]
-repo = 'Shougo/neosnippet-snippets'
-
-[[plugins]]
 repo = 'Shougo/neomru.vim'
 
 [[plugins]]
-repo = 'Shougo/deoplete.nvim'
+repo = 'Shougo/neosnippet-snippets'
 
 [[plugins]]
 repo = 'Shougo/neosnippet.vim'
-
-[[plugins]]
-repo = 'autozimu/LanguageClient-neovim'
-branch = 'next'
-build = 'bash install.sh'
-depends = 'Shougo/deoplete.nvim'
 
 [[plugins]]
 repo = 'mattn/emmet-vim'
@@ -71,3 +62,9 @@ repo = "leafgarland/typescript-vim"
 
 [[plugins]]
 repo = "Quramy/tsuquyomi"
+
+[[plugins]]
+repo = 'neoclide/coc.nvim'
+rev = 'release'
+on_i = 1
+merged = '0'
