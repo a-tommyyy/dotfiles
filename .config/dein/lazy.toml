@@ -29,8 +29,6 @@ repo = 'tpope/vim-endwise.git'
 on_ft = ['ruby', 'eruby']
 hook_post_source = '''
 let g:endwise_no_mappings = v:true
-inoremap <expr> <Plug>CustomCocCR pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-imap <CR> <Plug>CustomCocCR<Plug>DiscretionaryEnd
 '''
 
 [[plugins]] # Railsプロジェクト用プラグイン

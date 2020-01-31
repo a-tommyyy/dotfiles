@@ -232,6 +232,8 @@ inoremap <silent><expr> <c-space> coc#refresh()
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 " Or use `complete_info` if your vim support it, like:
 " inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
+autocmd FileType ruby inoremap <expr> <Plug>CustomCocCR pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+autocmd FileType ruby imap <CR> <Plug>CustomCocCR<Plug>DiscretionaryEnd
 
 
 " Use `[g` and `]g` to navigate diagnostics
