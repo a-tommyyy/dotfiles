@@ -72,3 +72,10 @@ on_ft = ["typescriptreact"]
 [[plugins]]
 repo = "rust-lang/rust.vim"
 on_ft = ["rust"]
+
+[[plugins]]
+repo = "ElmCast/elm-vim"
+on_ft = ["elm"]
+hook_post_source = '''
+let g:elm_setup_keybindings = 0
+'''

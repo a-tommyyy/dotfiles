@@ -28,3 +28,7 @@ export PATH=$HOME/.cargo/bin:$PATH
 # nvim
 export XDG_CONFIG_HOME=$HOME/.config
 export XDG_CACHE_HOME=$HOME/.cache
+
+# githubcli
+export GHCLI_ROOT=$HOME/.githubcli
+export PATH=$GHCLI_ROOT/bin:$PATH
