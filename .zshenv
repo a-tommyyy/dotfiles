@@ -10,6 +10,7 @@ export PATH=$PYENV_ROOT/bin:$PATH
 # goenv
 export GOENV_ROOT=$HOME/.goenv
 export PATH=$GOENV_ROOT/bin:$PATH
+export GOBIN=$GOPATH/bin
 
 # rbenv
 export RBENV_ROOT=$HOME/.rbenv
