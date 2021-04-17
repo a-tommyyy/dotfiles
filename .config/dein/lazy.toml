@@ -72,6 +72,9 @@ on_ft = ["typescriptreact"]
 [[plugins]]
 repo = "rust-lang/rust.vim"
 on_ft = ["rust"]
+hook_post_source = '''
+let g:rustfmt_autosave = 1
+'''
 
 [[plugins]]
 repo = "ElmCast/elm-vim"
