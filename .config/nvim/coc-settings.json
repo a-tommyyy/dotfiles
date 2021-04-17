@@ -1,21 +1,6 @@
 {
-  "languageserver": {
-    "elmLS": {
-      "command": "elm-language-server",
-      "filetypes": ["elm"],
-      "rootPatterns": ["elm.json"],
-      "initializationOptions": {
-        "elmAnalyseTrigger": "change"
-      }
-    }
-  },
-  "coc.preferences.formatOnSaveFiletypes": ["typescript", "scss", "css", "javascript"],
-  "eslint.autoFixOnSave": true,
-  "eslint.autoFix": true,
-  "tsserver.enableJavascript": false,
-  "diagnostic.errorSign": "✘",
-  "diagnostic.warningSign": "",
-  "diagnostic.infoSign": "",
+  "suggest.noselect":false,
+  "suggest.preferCompleteThanJumpPlaceholder":true,
   "suggest.completionItemKindLabels": {
     "keyword": "\uf1de",
     "variable": "\ue79b",
@@ -43,5 +28,29 @@
     "typeParameter": "\uf728",
     "default": "\uf29c"
   },
+  "languageserver": {
+    "golang": {
+      "command": "gopls",
+      "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
+      "filetypes": ["go"],
+      "initializationOptions": {
+        "usePlaceHolders": true
+      }
+    },
+    "elmLS": {
+      "command": "elm-language-server",
+      "filetypes": ["elm"],
+      "rootPatterns": ["elm.json"],
+      "initializationOptions": {
+        "elmAnalyseTrigger": "change"
+      }
+    }
+  },
+  "coc.preferences.formatOnSaveFiletypes": ["typescript", "scss", "css", "javascript"],
+  "eslint.autoFixOnSave": true,
+  "tsserver.enableJavascript": false,
+  "diagnostic.errorSign": "E",
+  "diagnostic.warningSign": "W",
+  "diagnostic.infoSign": "I",
   "codeLens.enable": true
 }
