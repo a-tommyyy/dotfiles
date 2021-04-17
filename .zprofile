@@ -63,9 +63,4 @@ if (( $#commands[(i)lesspipe(|.sh)] )); then
 fi
 
 export PATH="$HOME/.cargo/bin:$PATH"
-echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/akifumitomiyama/.zprofile
-eval "$(/opt/homebrew/bin/brew shellenv)"
-eval "$(/opt/homebrew/bin/brew shellenv)"
-eval "$(/opt/homebrew/bin/brew shellenv)"
-eval "$(/opt/homebrew/bin/brew shellenv)"
 eval "$(/opt/homebrew/bin/brew shellenv)"
