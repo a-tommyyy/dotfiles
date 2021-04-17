@@ -1,0 +1,34 @@
+- name: Install rbenv
+  homebrew:
+    name: rbenv
+    state: latest
+
+- name: Install ruby-build
+  homebrew:
+    name: ruby-build
+    state: latest
+
+- name: "Check rbenv versions include {{ version }}"
+  shell: 'bash -lc "rbenv versions | grep {{ version }}"'
+  register: check_rbenv_versions
+  changed_when: False
+  ignore_errors: yes
+
+- name: "Check rbenv install list include {{ version }}"
+  shell: 'bash -lc "rbenv install --list-all | grep {{ version }}"'
+  register: check_ruby_versions
+  changed_when: False
+  ignore_errors: yes
+
+- name: "Install ruby {{ version }}"
+  shell: "rbenv install -s {{ version }}"
+  when: "check_ruby_versions is not failed"
+  changed_when: "check_rbenv_versions is failed"
+
+- name: "Install solargraph"
+  gem:
+    name: solargraph
+
+- name: "install neovim"
+  gem:
+    name: neovim

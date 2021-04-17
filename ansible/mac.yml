@@ -1,0 +1,25 @@
+---
+- hosts: 127.0.0.1
+  roles:
+    - role: homebrew
+      tags: brew
+    - role: zsh
+      tags: sh
+    - role: neovim
+      tags: vim
+    - role: ruby
+      tags: rb
+      vars:
+        version: 2.7.3
+    - role: ruby
+      tags: rb
+      vars:
+        version: 3.0.1
+    - role: python
+      tags: py
+    - role: golang
+      tags: go
+    - role: rust
+      tags: rs
+    - role: node
+      tags: nd
