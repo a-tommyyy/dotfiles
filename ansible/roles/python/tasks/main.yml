@@ -1,0 +1,35 @@
+- name: Install pyenv
+  homebrew:
+    name: pyenv
+    state: latest
+
+- name: Check pyenv versions include? {{ version }}
+  shell: 'bash -lc "pyenv versions | grep {{ version }}"'
+  register: check_pyenv_versions
+  changed_when: False
+  ignore_errors: yes
+
+- name: Check pyenv install --list include {{ version }}
+  shell: 'bash -lc "pyenv install --list | grep {{ version }}"'
+  register: check_python_versions
+  changed_when: False
+  ignore_errors: yes
+
+- name: Install Python {{ version }}
+  shell: pyenv install -s {{ version }}
+  when: check_pyenv_versions is failed
+  changed_when: check_python_versions is not failed
+
+- name: Install pynvim
+  pip:
+    name: pynvim
+    state: latest
+  environment:
+    PYENV_VERSION: "{{ version }}"
+
+- name: Install neovim
+  pip:
+    name: neovim
+    state: latest
+  environment:
+    PYENV_VERSION: "{{ version }}"

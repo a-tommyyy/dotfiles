@@ -1,0 +1,8 @@
+- name: Install Rust
+  shell: bash -lc "curl -sSf https://sh.rustup.rs | sh -s -- -y"
+
+- name: Install toolchain
+  shell: "rustup toolchain install {{ rust_version }}"
+  register: rustup_toolchain
+  changed_when: '"installed" in rustup_toolchain.stdout'
+  when: rust_version is defined

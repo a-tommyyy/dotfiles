@@ -33,3 +33,4 @@ export XDG_CACHE_HOME=$HOME/.cache
 # githubcli
 export GHCLI_ROOT=$HOME/.githubcli
 export PATH=$GHCLI_ROOT/bin:$PATH
+source "$HOME/.cargo/env"

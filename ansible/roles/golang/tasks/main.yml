@@ -1,0 +1,4 @@
+- name: Install goenv
+  git:
+    repo: https://github.com/sloria/dotfiles
+    dest: ~/.goenv

@@ -1,0 +1,7 @@
+- name: Update homebrew
+  homebrew: update_homebrew=yes
+
+- name: Update ansible
+  homebrew:
+    name: ansible
+    state: latest

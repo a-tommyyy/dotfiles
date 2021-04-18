@@ -55,8 +55,14 @@ if [[ $? != 0 ]]; then
 fi
 echo -e "finished cloning dotfile repo\n\n"
 
+# bundle Brewfile
+brewfile_path=$DOTFILE_PATH/Brewfile
+if [ -e $brewfile_path ]; then
+  brew bundle --file $brewfile_path
+fi
+
 # apply playbook
-file_path=$DOTFILE_PATH/ansible/mac.yml
-if [ -e $file_path ]; then
-  ansible-playbook $file_path -i 127.0.0.1 -K -v
+playbook_path=$DOTFILE_PATH/ansible/mac.yml
+if [ -e $playbook_path ]; then
+  ansible-playbook $playbook_path -K -v
 fi

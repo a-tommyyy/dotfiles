@@ -15,11 +15,16 @@
       tags: rb
       vars:
         version: 3.0.1
+        set_global: True
     - role: python
       tags: py
+      vars:
+        version: 3.9.4
     - role: golang
       tags: go
     - role: rust
       tags: rs
     - role: node
       tags: nd
+    - role: dotfiles
+      tags: df

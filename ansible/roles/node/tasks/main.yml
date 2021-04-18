@@ -1,0 +1,4 @@
+- name: Install Nodenv
+  homebrew:
+    name: nodenv
+    state: latest

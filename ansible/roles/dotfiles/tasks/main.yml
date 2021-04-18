@@ -1,0 +1,21 @@
+- name: checkout dotfiles
+  git:
+    repo: git@github.com:atomiyama/dotfiles.git
+    dest: ~/dotfiles
+    update: yes
+    track_submodules: yes
+
+- name: link dotfiles
+  file:
+    src: ~/dotfiles/{{ item }}
+    dest: ~/{{ item }}
+    state: link
+  with_items:
+    - .zlogin
+    - .zlogout
+    - .zpreztorc
+    - .zprofile
+    - .zshenv
+    - .zshrc
+    - .config
+    - .fonts
