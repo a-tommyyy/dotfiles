@@ -21,7 +21,12 @@ alias lla='ls -al'
 alias fig='docker-compose'
 alias fir='docker-compose run --rm'
 alias fie='docker-compose exec'
-export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
+if [[ "$(uname -m)" == "arm64" ]]; then
+  export PATH="/opt/homebrew/Cellar/mysql@5.7/5.7.32/bin:$PATH"
+fi
+if [[ "$(uname -m)" == "x86_64" ]]; then
+  export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
+fi
 
 # settings for using japanese input on manjaro
 export GTK_IM_MODULE=fcitx
