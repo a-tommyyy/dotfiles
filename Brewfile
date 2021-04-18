@@ -9,5 +9,6 @@ brew "wget"
 brew "mas"
 brew "minio"
 brew "mysql@5.7"
+brew "direnv"
 
 cask "google-japanese-ime"

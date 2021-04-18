@@ -4,4 +4,4 @@
 *.log
 .DS_Store
 .fonts/.uuid
-Brewfile.lock.json
+/Brewfile.lock.json
