@@ -14,3 +14,4 @@ brew "direnv"
 brew "shared-mime-info"
 
 cask "google-japanese-ime"
+cask "font-hack-nerd-font"
