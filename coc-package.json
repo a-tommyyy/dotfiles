@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "coc-json": "*",
+    "coc-prettier": "*",
+    "coc-eslint": "*",
+    "coc-emmet": "*",
+    "coc-tsserver": "*",
+    "coc-solargraph": "*",
+    "coc-rls": "*",
+    "coc-go": "*"
+  }
+}

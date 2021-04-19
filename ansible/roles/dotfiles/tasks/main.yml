@@ -1,20 +1,31 @@
-- name: checkout dotfiles
-  git:
-    repo: git@github.com:atomiyama/dotfiles.git
-    dest: ~/dotfiles
-    update: yes
-    track_submodules: yes
-
 - name: link dotfiles
   file:
-    src: ~/dotfiles/{{ item }}
-    dest: ~/{{ item }}
+    src: ~/dotfiles/{{ item.file }}
+    dest: ~/{{ item.dest }}
     state: link
   with_items:
-    - .zlogin
-    - .zlogout
-    - .zpreztorc
-    - .zprofile
-    - .zshenv
-    - .zshrc
-    - .config
+    - file: dotfiles/.zlogin
+      dest: .zlogin
+    - file: dotfiles/.zlogout
+      dest: .zlogout
+    - file: dotfiles/.zpreztorc
+      dest: .zpreztorc
+    - file: dotfiles/.zprofile
+      dest: .zprofile
+    - file: dotfiles/.zshenv
+      dest: .zshenv
+    - file: dotfiles/.zshrc
+      dest: .zshrc
+    - file: dein
+      dest: .config/dein
+    - file: nvim
+      dest: .config/nvim
+    - file: iterm_theme
+      dest: .config/iterm_theme
+    - file: coc-package.json
+      dest: .config/coc/extensions/package.json
+
+- name: install Coc dependencies
+  npm:
+    path: ~/.config/coc/extensions
+    state: latest
