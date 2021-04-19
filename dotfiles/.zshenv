@@ -16,17 +16,23 @@ export GOBIN=$GOPATH/bin
 export RBENV_ROOT=$HOME/.rbenv
 export PATH=$RBENV_ROOT/bin:$PATH
 
-# ndenv
-export NODENV_ROOT=$HOME/.nodenv
-export PATH=$NODENV_ROOT/bin:$PATH
+# nodenv
+# export NODENV_ROOT=$HOME/.nodenv
+# export PATH=$NODENV_ROOT/bin:$PATH
 
-export PATH=$HOME/bin:$PATH
+# nodebrew
+export NODEBREW_ROOT=$HOME/.nodebrew
+export PATH=$NODEBREW_ROOT/current/bin:$PATH
+
+# github key
 export PATH_TO_GITHUB_KEY=~/.ssh/id_rsa
 
+# flutter
 export PATH=$HOME/flutter/bin:$PATH
+
+# cargo
 export PATH=$HOME/.cargo/bin:$PATH
 
-# nvim
 export XDG_CONFIG_HOME=$HOME/.config
 export XDG_CACHE_HOME=$HOME/.cache
 
