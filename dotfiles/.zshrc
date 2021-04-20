@@ -4,11 +4,11 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 export EDITOR=nvim
-eval "$(rbenv init -)"
-eval "$(goenv init -)"
-eval "$(pyenv init -)"
-eval "$(nodenv init -)"
 eval "$(direnv hook zsh)"
+eval "$(pyenv init -)"
+eval "$(goenv init -)"
+eval "$(rbenv init -)"
+# eval "$(nodenv init -)"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

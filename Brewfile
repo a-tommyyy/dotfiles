@@ -12,6 +12,7 @@ brew "mysql@5.7"
 brew "redis"
 brew "direnv"
 brew "shared-mime-info"
+brew "ag"
 
 cask "google-japanese-ime"
 cask "font-hack-nerd-font"
