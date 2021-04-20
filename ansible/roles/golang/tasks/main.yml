@@ -1,4 +1,5 @@
-- name: Install goenv
-  homebrew:
-    name: goenv
-    state: latest
+- name: install goenv
+  git:
+    repo: git@github.com:syndbg/goenv.git
+    dest: ~/.goenv
+
