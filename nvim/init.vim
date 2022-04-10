@@ -79,6 +79,8 @@ set mouse=a                                     "マウスモード有効
 " #####################################
 " ### Python provider
 " #####################################
+let g:loaded_python_provider = 0
+let g:python3_host_prog = '~/.pyenv/versions/3.9.4/bin/python3'
 
 " #####################################
 " ### SETUP dein.vim

@@ -8,7 +8,7 @@ eval "$(direnv hook zsh)"
 eval "$(pyenv init -)"
 eval "$(goenv init -)"
 eval "$(rbenv init -)"
-# eval "$(nodenv init -)"
+eval "$(nodenv init -)"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -27,6 +27,9 @@ fi
 if [[ "$(uname -m)" == "x86_64" ]]; then
   export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
 fi
+export PATH="/opt/homebrew/opt/curl/bin:$PATH"
+export PATH="/opt/homebrew/opt/mysql@5.7/bin:$PATH"
+export PATH="/opt/homebrew/opt/file-formula/bin:$PATH"
 
 # settings for using japanese input on manjaro
 export GTK_IM_MODULE=fcitx

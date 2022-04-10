@@ -63,3 +63,20 @@ if (( $#commands[(i)lesspipe(|.sh)] )); then
 fi
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
+eval "$(pyenv init --path)"
+
+# pyenv
+export PYENV_ROOT=$HOME/.pyenv
+export PATH=$PYENV_ROOT/bin:$PATH
+# goenv
+export GOENV_ROOT=$HOME/.goenv
+export PATH=$GOENV_ROOT/bin:$PATH
+export GOBIN=$GOPATH/bin
+# rbenv
+export RBENV_ROOT=$HOME/.rbenv
+export PATH=$RBENV_ROOT/bin:$PATH
+# nodenv
+export NODENV_ROOT=$HOME/.nodenv
+export PATH=$NODENV_ROOT/bin:$PATH
+# krew
+export PATH=$HOME/.krew/bin:$PATH

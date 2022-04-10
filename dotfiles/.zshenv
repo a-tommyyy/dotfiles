@@ -3,26 +3,6 @@ if [[ ( "$SHLVL" -eq 1 && ! -o LOGIN ) && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; t
   source "${ZDOTDIR:-$HOME}/.zprofile"
 fi
 
-# pyenv
-export PYENV_ROOT=$HOME/.pyenv
-export PATH=$PYENV_ROOT/bin:$PATH
-
-# goenv
-export GOENV_ROOT=$HOME/.goenv
-export PATH=$GOENV_ROOT/bin:$PATH
-export GOBIN=$GOPATH/bin
-
-# rbenv
-export RBENV_ROOT=$HOME/.rbenv
-export PATH=$RBENV_ROOT/bin:$PATH
-
-# nodenv
-# export NODENV_ROOT=$HOME/.nodenv
-# export PATH=$NODENV_ROOT/bin:$PATH
-
-# nodebrew
-export NODEBREW_ROOT=$HOME/.nodebrew
-export PATH=$NODEBREW_ROOT/current/bin:$PATH
 
 # github key
 export PATH_TO_GITHUB_KEY=~/.ssh/id_rsa
