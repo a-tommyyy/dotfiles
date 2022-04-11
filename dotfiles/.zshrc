@@ -32,3 +32,6 @@ export NODENV_ROOT=$HOME/.nodenv
 export PATH=$NODENV_ROOT/bin:$PATH
 # krew
 export PATH=$HOME/.krew/bin:$PATH
+# Golang
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
