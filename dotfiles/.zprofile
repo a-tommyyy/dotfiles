@@ -1,14 +1,6 @@
 #
-# Executes commands at login pre-zshrc.
-#
-# Authors:
-#   Sorin Ionescu <sorin.ionescu@gmail.com>
-#
-
-#
 # Browser
 #
-
 if [[ "$OSTYPE" == darwin* ]]; then
   export BROWSER='open'
 fi
@@ -16,7 +8,6 @@ fi
 #
 # Editors
 #
-
 export EDITOR='nvim'
 export VISUAL='nvim'
 export PAGER='less'
@@ -24,14 +15,9 @@ export PAGER='less'
 #
 # Language
 #
-
 if [[ -z "$LANG" ]]; then
   export LANG='en_US.UTF-8'
 fi
-
-#
-# Paths
-#
 
 # Ensure path arrays do not contain duplicates.
 typeset -gU cdpath fpath mailpath path
@@ -62,21 +48,3 @@ if (( $#commands[(i)lesspipe(|.sh)] )); then
   export LESSOPEN="| /usr/bin/env $commands[(i)lesspipe(|.sh)] %s 2>&-"
 fi
 
-eval "$(/opt/homebrew/bin/brew shellenv)"
-eval "$(pyenv init --path)"
-
-# pyenv
-export PYENV_ROOT=$HOME/.pyenv
-export PATH=$PYENV_ROOT/bin:$PATH
-# goenv
-export GOENV_ROOT=$HOME/.goenv
-export PATH=$GOENV_ROOT/bin:$PATH
-export GOBIN=$GOPATH/bin
-# rbenv
-export RBENV_ROOT=$HOME/.rbenv
-export PATH=$RBENV_ROOT/bin:$PATH
-# nodenv
-export NODENV_ROOT=$HOME/.nodenv
-export PATH=$NODENV_ROOT/bin:$PATH
-# krew
-export PATH=$HOME/.krew/bin:$PATH

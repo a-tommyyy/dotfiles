@@ -20,3 +20,10 @@ export XDG_CACHE_HOME=$HOME/.cache
 export GHCLI_ROOT=$HOME/.githubcli
 export PATH=$GHCLI_ROOT/bin:$PATH
 source "$HOME/.cargo/env"
+
+export PATH="/opt/homebrew/opt/curl/bin:$PATH"
+export PATH="/opt/homebrew/opt/mysql@5.7/bin:$PATH"
+export PATH="/opt/homebrew/opt/file-formula/bin:$PATH"
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+
