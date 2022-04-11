@@ -20,9 +20,8 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 eval "$(direnv hook zsh)"
 # pyenv
+eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
-export PYENV_ROOT=$HOME/.pyenv
-export PATH=$PYENV_ROOT/bin:$PATH
 # rbenv
 eval "$(rbenv init -)"
 export RBENV_ROOT=$HOME/.rbenv
