@@ -23,13 +23,13 @@ eval "$(direnv hook zsh)"
 eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
 # rbenv
-eval "$(rbenv init -)"
 export RBENV_ROOT=$HOME/.rbenv
 export PATH=$RBENV_ROOT/bin:$PATH
+eval "$(rbenv init -)"
 # nodenv
-eval "$(nodenv init -)"
 export NODENV_ROOT=$HOME/.nodenv
 export PATH=$NODENV_ROOT/bin:$PATH
+eval "$(nodenv init -)"
 # krew
 export PATH=$HOME/.krew/bin:$PATH
 # Golang
