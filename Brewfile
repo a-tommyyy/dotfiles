@@ -13,6 +13,4 @@ brew "redis"
 brew "direnv"
 brew "shared-mime-info"
 brew "ag"
-
-cask "google-japanese-ime"
-cask "font-hack-nerd-font"
+brew "planetscale/tap/pscale"
