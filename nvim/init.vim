@@ -22,7 +22,6 @@ filetype plugin indent on
 
 " filetype
 filetype on
-au BufNewFile,BufRead *.etl.erb setf ruby
 set fileencoding=utf-8
 set ambiwidth=double
 
