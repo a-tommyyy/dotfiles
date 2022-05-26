@@ -86,3 +86,11 @@ let g:elm_setup_keybindings = 0
 [[plugins]]
 repo = "hashivim/vim-terraform"
 on_ft = ["tf"]
+
+[[plugins]]
+repo = "dart-lang/dart-vim-plugin"
+on_ft = ["dart"]
+
+[[plugins]]
+repo = "thosakwe/vim-flutter"
+on_ft = ["dart"]
