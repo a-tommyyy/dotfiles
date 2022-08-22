@@ -10,6 +10,8 @@ alias lla='ls -al'
 alias fig='docker-compose'
 alias fir='docker-compose run --rm'
 alias fie='docker-compose exec'
+alias k='kubectl'
+alias sk='skaffold'
 
 setopt print_eight_bit
 autoload -Uz compinit
@@ -42,3 +44,5 @@ export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 # Embulk
 export PATH="$HOME/.embulk/bin:$PATH"
+
+export PATH="$HOME/.local/bin:$PATH"

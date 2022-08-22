@@ -44,6 +44,16 @@
       "initializationOptions": {
         "elmAnalyseTrigger": "change"
       }
+    },
+    "terraformLS": {
+      "command": "terraform-ls",
+      "args": ["serve"],
+      "filetypes": [
+        "tf",
+        "terraform"
+      ],
+      "initializationOptions": {},
+      "settings": {}
     }
   },
   "coc.preferences.formatOnSaveFiletypes": ["typescript", "typescriptreact", "scss", "css", "javascript"],
