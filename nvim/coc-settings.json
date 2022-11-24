@@ -54,6 +54,18 @@
       ],
       "initializationOptions": {},
       "settings": {}
+    },
+    "bigquery": {
+      "command": "bq-language-server",
+      "args": ["--stdio"],
+      "filetypes": ["sql", "eruby", "bigquery"],
+      "settings": {
+        "bqExtensionVSCode": {
+          "diagnostic": {
+            "forVSCode": false
+          }
+        }
+      }
     }
   },
   "coc.preferences.formatOnSaveFiletypes": ["typescript", "typescriptreact", "scss", "css", "javascript"],
