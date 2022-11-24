@@ -8,6 +8,9 @@
     "coc-python": ">=1.2.13",
     "coc-rls": "*",
     "coc-solargraph": ">=1.2.3",
+    "coc-sql": ">=0.10.4",
     "coc-tsserver": ">=1.10.0"
-  }
+  },
+  "disabled": [],
+  "locked": []
 }
