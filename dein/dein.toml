@@ -32,8 +32,8 @@ let g:indent_guides_guide_size = 1
 
 [[plugins]]
 repo = 'Shougo/defx.nvim'
-depends = ['defx-git', 'defx-icons']
-hook_add = """
+depends = ['defx-icons', 'defx-git']
+hook_add = '''
 source ~/.config/nvim/plugins/defx.rc.vim
 call defx#custom#option('_', {
   \ 'winwidth': 30,
@@ -43,8 +43,10 @@ call defx#custom#option('_', {
   \ 'buffer_name': 'explorer',
   \ 'toggle': 1,
   \ 'resume': 1,
+  \ 'columns': 'indent:icons:filename:type'
   \ })
 """
+'''
 
 [[plugins]]
 repo = 'kristijanhusak/defx-icons'
