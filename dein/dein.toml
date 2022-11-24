@@ -22,26 +22,26 @@ let g:indent_guides_start_level = 2
 let g:indent_guides_guide_size = 1
 '''
 
-[[plugins]] # FileTree
-repo = 'scrooloose/nerdtree'
-hook_add = '''
-nnoremap <silent><C-e> :NERDTreeToggle<CR>
-nmap <Leader><Tab> <C-w>w
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-'''
+# [[plugins]] # FileTree
+# repo = 'scrooloose/nerdtree'
+# hook_add = '''
+# nnoremap <silent><C-e> :NERDTreeToggle<CR>
+# nmap <Leader><Tab> <C-w>w
+# autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+# '''
 
-# [[plugins]]
-# repo = 'Shougo/defx.nvim'
-# depends = ['defx-git', 'defx-icons']
-# hook_add = """
-# source ~/.config/nvim/plugins/defx.rc.vim
-# """
-# 
-# [[plugins]]
-# repo = 'kristijanhusak/defx-icons'
-# 
-# [[plugins]]
-# repo = 'kristijanhusak/defx-git'
+[[plugins]]
+repo = 'Shougo/defx.nvim'
+depends = ['defx-git', 'defx-icons']
+hook_add = """
+source ~/.config/nvim/plugins/defx.rc.vim
+"""
+
+[[plugins]]
+repo = 'kristijanhusak/defx-icons'
+
+[[plugins]]
+repo = 'kristijanhusak/defx-git'
 
 [[plugins]]
 repo = 'jiangmiao/auto-pairs'
@@ -55,12 +55,6 @@ build = 'make'
 
 [[plugins]]
 repo = 'Shougo/neomru.vim'
-
-[[plugins]]
-repo = 'Shougo/neosnippet-snippets'
-
-[[plugins]]
-repo = 'Shougo/neosnippet.vim'
 
 [[plugins]]
 repo = 'mattn/emmet-vim'
