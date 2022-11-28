@@ -39,7 +39,7 @@ function! s:defx_my_settings() abort
   nnoremap <silent><buffer><expr> !
   \ defx#do_action('execute_command')
   nnoremap <silent><buffer><expr> x
-  \ defx#do_action('execute_system')
+  \ defx#do_action('close_tree')
   nnoremap <silent><buffer><expr> yy
   \ defx#do_action('yank_path')
   nnoremap <silent><buffer><expr> .
