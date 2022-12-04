@@ -70,13 +70,6 @@ let g:rustfmt_autosave = 1
 '''
 
 [[plugins]]
-repo = "ElmCast/elm-vim"
-on_ft = ["elm"]
-hook_post_source = '''
-let g:elm_setup_keybindings = 0
-'''
-
-[[plugins]]
 repo = "hashivim/vim-terraform"
 on_ft = ["tf", "terraform"]
 

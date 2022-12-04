@@ -17,9 +17,6 @@ set softtabstop=2
 set autoindent
 set smarttab
 
-" change tab setting in case by filetypes
-filetype plugin indent on
-
 " filetype
 filetype on
 set fileencoding=utf-8
