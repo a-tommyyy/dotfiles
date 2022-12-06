@@ -22,14 +22,6 @@ let g:indent_guides_start_level = 2
 let g:indent_guides_guide_size = 1
 '''
 
-# [[plugins]] # FileTree
-# repo = 'scrooloose/nerdtree'
-# hook_add = '''
-# nnoremap <silent><C-e> :NERDTreeToggle<CR>
-# nmap <Leader><Tab> <C-w>w
-# autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-# '''
-
 [[plugins]]
 repo = 'Shougo/defx.nvim'
 depends = ['defx-icons', 'defx-git']
@@ -39,7 +31,6 @@ call defx#custom#option('_', {
   \ 'winwidth': 30,
   \ 'split': 'vertical',
   \ 'direction': 'topleft',
-  \ 'show_ignored_files': 1,
   \ 'buffer_name': 'explorer',
   \ 'toggle': 1,
   \ 'resume': 1,
