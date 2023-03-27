@@ -12,6 +12,9 @@ alias fir='docker-compose run --rm'
 alias fie='docker-compose exec'
 alias k='kubectl'
 alias sk='skaffold'
+alias tf='terraform'
+alias tfw='terraform workspace'
+alias tfs='terraform state'
 
 setopt print_eight_bit
 autoload -Uz compinit

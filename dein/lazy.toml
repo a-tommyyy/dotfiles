@@ -20,16 +20,16 @@ call denite#custom#var('file/rec/git', 'command',
     \ ['git', 'ls-files', '-co', '--exclude-standard'])
 '''
 
-################################################
-# Ruby
-################################################
-
 [[plugins]] # def end の自動入力
 repo = 'tpope/vim-endwise.git'
 on_ft = ['ruby', 'eruby']
 hook_post_source = '''
 let g:endwise_no_mappings = v:true
 '''
+
+[[plugins]]
+repo = 'tpope/vim-rails'
+on_ft = ['ruby', 'eruby']
 
 [[plugins]]
 repo = 'slim-template/vim-slim'
