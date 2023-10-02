@@ -42,16 +42,13 @@ export PATH=$NODENV_ROOT/bin:$PATH
 eval "$(nodenv init -)"
 # krew
 export PATH=$HOME/.krew/bin:$PATH
-# Golang
-# export GOPATH=$HOME/go
-# export PATH=$PATH:$GOPATH/bin
 # Embulk
 export PATH="$HOME/.embulk/bin:$PATH"
 
 export PATH="$HOME/.local/bin:$PATH"
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/akifumitomiyama/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/akifumitomiyama/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f "$HOME/google-cloud-sdk/path.zsh.inc" ]; then . "$HOME/google-cloud-sdk/path.zsh.inc"; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/akifumitomiyama/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/akifumitomiyama/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f "$HOME/google-cloud-sdk/completion.zsh.inc" ]; then . "$HOME/google-cloud-sdk/completion.zsh.inc"; fi
