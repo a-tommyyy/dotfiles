@@ -1,5 +1,6 @@
 tap "homebrew/bundle"
 tap "homebrew/core"
+tap "homebrew/cask"
 
 brew "ansible"
 brew "ansible-lint"
@@ -16,3 +17,4 @@ brew "ag"
 brew "planetscale/tap/pscale"
 brew "digdag"
 brew "go"
+cask "flutter"
