@@ -81,3 +81,7 @@ repo = 'neoclide/coc.nvim'
 rev = 'release'
 on_i = 1
 merged = '0'
+
+[[plugins]]
+repo = 'github/copilot.vim'
+

@@ -47,6 +47,10 @@ export PATH="$HOME/.embulk/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 # Dart
 export PATH="$HOME/.pub-cache/bin:$PATH"
+# Go
+export GOENV_ROOT=$HOME/.goenv
+export PATH=$GOENV_ROOT/bin:$PATH
+eval "$(goenv init -)"
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f "$HOME/google-cloud-sdk/path.zsh.inc" ]; then . "$HOME/google-cloud-sdk/path.zsh.inc"; fi
